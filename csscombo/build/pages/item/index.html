@@ -1,0 +1,845 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="gbk">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link type="image/x-icon" href="http://www.taobao.com/favicon.ico" rel="shortcut icon">
+        <title>Demo</title>
+        <link rel="stylesheet" href="http://a.tbcdn.cn/??p/global/1.0/global-min.css,apps/snstaoshare/dig/1.0/dig.css">
+        <link rel="stylesheet" href="index.css">
+        <script>
+            g_config = {
+                startTime:+new Date,
+                prefetch:[],
+                t:'20130822',
+                appId:1,
+                itemId:2100502337305,
+                shopId:"2024098454",
+                pageId:2100502337305,
+                assetsHost:"http://a.tbcdn.cn",
+                enable:true,
+                p:1.0,
+                type:"cex",
+                counterApi:"http://count.config-vip.taobao.net/counter3?keys=DFX_200_1_2100502337305,ICVT_7_2100502337305,ICCP_1_2100502337305,SCCP_2_2024098454,ICE_3_feedcount-2100502337305,ZAN_27_2_2100502337305&inc=ICVT_7_2100502337305&callback=page_viewcount&sign=5871971eb3f8ed0584692a582f624455f37e7",
+                toolbar:{delay:30},
+                h_wangpu2012: false
+            };
+
+            g_config.idata = {
+                item: {
+                    id: 2100502337305
+                },
+                seller: {
+                    id: 2024098454
+                },
+                shop: {
+                    id: 45656345
+                }
+            };
+
+            item_config = {
+                item_id: 2100504667938,
+                title: '测试标题',
+                today: new Date,
+                maxInterval: 28,
+                maxCheckOut: 90,
+                descUrl: 'dsc01.taobao.com/i1/230/130/23413092235/T1OVYwFgJbXXcWeqbX.desc|var^desc;sign^0dabeb0a6b4ca9277cbbaedecf78d17c;lang^gb18030;t^1386658247',
+                useCache: 0,
+                server: 'http://g.assets.daily.taobao.net'
+            };
+        </script>
+        <script src="http://g.tbcdn.cn/??kissy/k/1.3.0/seed-min.js"></script>
+        <script src="http://a.tbcdn.cn/??p/global/1.0/global-min.js,p/snsdk/core.js"></script>
+        <!--<script src="http://a.tbcdn.cn/??s/kissy/1.3.0/kissy-min.js,p/global/1.0/global-min.js,p/snsdk/core.js"></script>-->
+        <script src="../../config.js"></script>
+    </head>
+    <body class="tb-new">
+
+        <!-- start vmc 3.1 -->
+        <div id="site-nav">
+            <div id="site-nav-bd">
+                <div class="sitenav-mobile">
+                    <a href=" http://www.taobao.com/m?spm=1.1000386.176505.4&amp;TBG=146112.176505.4">手机版</a>
+                </div>
+                <p class="login-info">
+                    <script>TB.Global.writeLoginInfo({"memberServer": "http://member1.daily.taobao.net/", "outmemServer" : "", "loginServer": "https://login.daily.taobao.net/", redirectUrl : "", logoutUrl : ""});</script>
+                </p>
+
+                <ul class="quick-menu">
+                    <li class="home">
+                        <a href="http://www.taobao.com/" target="_top">淘宝网首页</a>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu">
+                            <a class="menu-hd" style="width:36px;" href="http://guang.taobao.com" target="_top" rel="nofollow">
+                                我要逛 <b></b>
+                            </a>
+                            <div class="menu-bd" style="width:68px;height:114px;line-height:1.7;">
+                                <div class="menu-bd-panel" style="padding:8px 10px;">
+                                    <div>
+                                        <a href="http://dongtai.taobao.com/hub/new_arrival.htm?scm=1046.1.7.1" target="_top" rel="nofollow">逛上新</a>
+                                        <a href="http://dongtai.taobao.com/hub/promotion.htm?scm=1046.1.8.1" target="_top" rel="nofollow">逛优惠</a>
+                                        <br />
+                                        <a href="http://yiqi.taobao.com/plus/group_square.htm" target="_top" rel="nofollow">小分队</a>
+                                        <br />
+                                        <a href="http://www.taobao.com/go/act/sns/taoban_download1.php?channel_id=701354&tracelog=tbshouye" target="_top" rel="nofollow">用手机逛</a>
+                                        <a href="http://list.taobao.com/browse/cat-0.htm?taobao_from=6" target="_top" rel="nofollow">商品分类</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="mytaobao menu-item">
+                        <div class="menu">
+                            <a class="menu-hd" href="http://i.taobao.com/my_taobao.htm" target="_top" rel="nofollow">
+                                我的淘宝 <b></b>
+                            </a>
+                            <div class="menu-bd" style="height: 75px;width:100px">
+                                <div class="menu-bd-panel" id="myTaobaoPanel">
+                                    <div >
+                                        <a href="http://trade.taobao.com/trade/itemlist/list_bought_items.htm" target="_top" rel="nofollow">已买到的宝贝</a>
+                                    </div>
+                                    <div >
+                                        <a href="http://dongtai.taobao.com/index.htm?scm=1046.1.1.1" target="_top" rel="nofollow">店铺动态</a>
+                                    </div>
+                                    <div >
+                                        <a href="http://i.taobao.com/feed/friend_feed.htm?tracelog=taobaoindexrsidenewfeed" target="_top" rel="nofollow">好友动态</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <style>
+                        #site-nav .seller-center .menu-hd{ width:48px;}
+                        #site-nav .seller-center .menu-bd{ width: 94px; line-height:1.7;}
+                        #site-nav .seller-center .menu-bd-panel{padding: 8px 10px;}
+                    </style>
+                    <li class="seller-center menu-item">
+                        <div class="menu">
+                            <a class="menu-hd" href="http://mai.taobao.com/seller_admin.htm" target="_top" rel="nofollow">
+                                卖家中心
+                                <b></b>
+                            </a>
+                            <div class="menu-bd">
+                                <div class="menu-bd-panel">
+                                    <div>
+                                        <a href="http://trade.taobao.com/trade/itemlist/list_sold_items.htm" target="_top" rel="nofollow">已卖出的宝贝</a>
+                                        <a href="http://sell.taobao.com/auction/goods/goods_on_sale.htm" target="_top" rel="nofollow">出售中的宝贝</a>
+                                        <a href="http://fuwu.taobao.com/?tracelog=tbdd" target="_top" rel="nofollow">卖家服务市场</a>
+                                        <a href="http://learn.taobao.com/user/xueyuanRedirect.htm?target=http://www.alibado.com" target="_top" rel="nofollow">卖家培训中心</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="service">
+                        <a href="http://service.taobao.com/support/main/service_center.htm" target="_top" rel="nofollow">联系客服</a>
+                    </li>
+                    <li class="cart">
+                        <a href="http://cart.taobao.com/my_cart.htm" target="_top" rel="nofollow">
+                            <s></s>
+                            购物车
+                        </a>
+                        <b class="leftline"></b>
+                        <b class="rightline"></b>
+                    </li>
+                    <li class="favorite menu-item">
+                        <div class="menu">
+                            <a class="menu-hd" style="width:36px;" href="http://favorite.taobao.com/collect_list.htm?itemtype=0" target="_top" rel="nofollow">
+                                收藏夹
+                                <b></b>
+                            </a>
+                            <div class="menu-bd" style="width:82px;height:57px;line-height:1.7;">
+                                <div class="menu-bd-panel" style="padding:8px 10px;">
+                                    <div>
+                                        <a href="http://favorite.taobao.com/collect_list.htm?itemtype=1" target="_top" rel="nofollow">收藏的宝贝</a>
+                                        <a href="http://favorite.taobao.com/collect_list.htm?itemtype=0" target="_top" rel="nofollow">收藏的店铺</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="services menu-item last">
+                        <div id="J_Service" class="menu">
+                            <a class="menu-hd" href="http://www.taobao.com/sitemap.php?id=sitemap2" target="_top">
+                                网站导航
+                                <b></b>
+                            </a>
+                            <div id="J_ServicesContainer" class="menu-bd" style="width:202px;width:210px\9;_width:202px;height:337px;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- -->
+        <!-- 全网顶通 -->
+        <!-- end vmc 3.1 -->
+        <script>TB.Global.init();</script>
+
+        <link rel="stylesheet" href="http://a.tbcdn.cn/apps/et/common/css/trip-all.css">
+        <div id="trip-item-head">
+            <div id="header">
+                <a href="http://trip.taobao.com/" class="logo" title="淘宝旅行">淘宝旅行</a>
+                <div class="clear">
+                    <div class="shop-wrap">
+                        <div class="trip-product">
+                            <a href="http://jipiao.trip.taobao.com/" title="机票" target="_blank">机票</a>
+                            <a href="http://jiudian.trip.taobao.com/" title="酒店" target="_blank">酒店</a>
+                            <a href="http://trip.taobao.com/kezhan/" title="客栈" target="_blank">客栈</a>
+                            <a href="http://trip.taobao.com/qianzheng/index.htm" title="签证" target="_blank">签证</a>
+                            <a href="http://trip.taobao.com/dujia/index.htm" title="线路" target="_blank">线路</a>
+                            <a href="http://trip.taobao.com/menpiao/index.htm" title="门票" target="_blank">门票</a>
+                            <a href="http://trip.taobao.com/zuche/index.htm" title="租车" target="_blank">租车</a>
+                            <a href="http://trip.taobao.com/youlun/index.htm" title="邮轮" target="_blank">邮轮</a>
+                        </div>
+                        <div id="shop-search">
+                            <form id="J_TBSearchForm" action="http://s.taobao.com/search">
+                                <label for="shop-q">想找什么宝贝?</label>
+                                <input type="text" id="shop-q" name="q" autocomplete="off" class="shop-text">
+                                <input type="hidden" name="searcy_type" value="item">
+                                <input type="hidden" value="newHeader" name="s_from">
+                                <input type="hidden" name="source">
+                                <input type="hidden" name="ssid" value="s5-e">
+                                <input type="hidden" name="search" value="y">
+                                <span class="global">
+                                    <button class="searchtb" type="submit">搜索全网</button>
+                                </span> <b class="shop-radius-l"></b>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            #detail .tb-shopinfo .trip-seller .intro{background: url(http://img01.taobaocdn.com/tps/i1/T119TOXapcXXcr133D-192-110.gif);}
+        </style>
+
+        <div id="page">
+            <div id="content" class="eshop tb-shop" data-isquickbuyseller="false" data-quickbuyurl="">
+                <p id="J_dcpg" class="design-page hidden">
+                    <a href="http://design.daily.taobao.net//design.htm?pageId=1230534&amp;prototypeId=2" target="_blank">
+                        <img src="http://img04.taobaocdn.com/tps/i8/T1J.8vXclxXXXXXXXX-16-16.png" />
+                        装修此页面
+                    </a>
+                </p>
+                <!-- 顶部装修 -->
+                <!--hd,cacheAt:2013-12-03 15:05:14,ip:10.232.10.68-->
+                <div class="tb-shop" id="hd">
+                    <div class="layout grid-m" >
+                        <div class="col-main">
+                            <div class="main-wrap J_TRegion" data-modules="main" data-width="h950"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bd">
+                    <!-- detail start -->
+                    <div id="detail" class="mod-sku">
+                        <div class="tb-detail-hd">
+                            <h3 id="J_HotelTitle" data-item-id="1761062" data-item-iid="2100502337305" data-seller-id="2024098454" data-hotel-hid="6306" data-hotel-shid="77344">雨素-北京唐悦酒店-面付+预付</h3>
+                            <p id="J_TEditItem">
+                                <a href="http://kezhan.trip.daily.taobao.net/publish.htm?item_num_id=2100502337305" class="edit-item hidden" target="_blank">编辑</a>
+                            </p>
+                            <div class="tb-report" id="J_Report">
+                                <p class="tb-report-heading">
+                                    举报中心<span class="tb-arrow"></span>
+                                </p>
+                                <ul class="tb-report-menu" style="visibility: hidden;">
+                                    <li>
+                                        <a target="_self" href="http://support.taobao.com/myservice/suit/accuse_punish.jhtml?display_type=3&amp;spm=2013.1.1000373.1&amp;auction_num_id=2100502337305" id="J_isuit">举报此商品</a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="http://bbs.taobao.com/catalog/thread/154504-977100.htm?spm=2013.1.1000373.2">商品举报演示</a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="http://bbs.taobao.com/catalog/424023.htm?spm=2013.1.1000373.3">购物安全防骗</a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="http://315.taobao.com?spm=2013.1.1000373.4">消费质量曝光</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tb-detail-bd tb-clear">
+                            <div class="tb-summary tb-clear">
+                                <div class="tb-gallery">
+                                    <div class="tb-booth tb-pic tb-s310">
+                                        <a><img id="J_ImgBooth" data-haszoom="700" src="http://img01.daily.taobaocdn.net/bao/uploaded/i3/2024098454/T2goRbXclXXXXXXXXX_!!2024098454.jpg_310x310.jpg" /></a>
+                                        <div class="zoom-icon hidden" id="J_zoomIcon"></div>
+                                    </div>
+                                    <ul id="J_UlThumb" class="tb-thumb tb-clearfix">
+                                        <li class="tb-selected">
+                                            <div class="tb-pic tb-s40">
+                                                <a href="javascript:;"><img src="http://img01.daily.taobaocdn.net/bao/uploaded/i3/2024098454/T2goRbXclXXXXXXXXX_!!2024098454.jpg_40x40.jpg" /></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="hotel-share-action tb-clear">
+                                        <li class="hotel-share">
+                                            <a id="J_HotelShareBtn" class="hotel-sns-btn" href="javascript:;">
+                                                <span> <i></i>
+                                                    分享宝贝 <em class="J_HotelShareCount"></em>
+                                                </span>
+                                            </a>
+                                            <div id="J_HotelBtShare" class="hotel-btshare"></div>
+                                        </li>
+                                        <li class="hotel-fav">
+                                            <a id="J_HotelFav" class="J_HotelFavTrigger hotel-sns-btn" href="http://favorite.taobao.com/popup/add_collection.htm?id=2100502337305&itemtype=1&_tb_token_=3RvROsnm" data-width="440" data-height="260" data-closebtn="true" hidefocus="true">
+                                                <span> <i></i>
+                                                    收藏宝贝 <em class="J_HotelFavCount"></em>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tb-property">
+                                    <div id="hotel-item">
+                                        <input type="hidden" id="J_DefaultDateFlag" value="0" />
+                                        <form id="J_HotelForm" class="hotel-form" method="get" action="/auction/buy_now.htm">
+                                            <input type="hidden" id="J_HotelGid" name="id" value="1761062" />
+                                            <input type="hidden" id="J_BuyNowVer" name="ver" value="2" />
+                                            <input type="hidden" id="J_JuKey" name="key" value="" />
+                                            <input type="hidden" id="J_SearchBy" name="searchBy" value="" />
+                                            <input type="hidden" id="J_LeftCount" name="leftCount" value="10000" />
+                                            <input type="hidden" id="J_Nights" name="nights" value="1" />
+                                            <input type="hidden" id="J_HotelIsQuickbuy" name="isquickbuy" value="0" />
+                                            <input type="hidden" id="J_HotelCity" name="city" value="" />
+                                            <input type="hidden" id="J_RateId" name="rateid" value="375893954">
+                                            <ul class="hotel-meta base-area tb-clear">
+                                                <li class="unit">
+                                                    <div class="l">每日均价</div>
+                                                    <div class="r">
+                                                        <span style="float:left"><strong class="J_TotalPrice total-price ">200.00</strong>元</span>
+                                                        <a id="J_RealPrice" class="real-price  hidden " title="卖家承诺价格真实，保证有房，无房赔付。" href="http://service.taobao.com/support/knowledge-5074991.htm" target="_blank">实价有房</a>
+                                                    </div>
+                                                </li>
+                                                <li class="unit">
+                                                    <div id="J_PromotionsWrap" class="hidden">
+                                                        <div class="l"></div>
+                                                        <div class="r">
+                                                            <ul id="J_ItemPromotions" class="promotions"></ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="unit" >
+                                                    <div id="J_Juhuasuan" class="hidden">
+                                                        <div class="l"></div>
+                                                        <div class="r">
+                                                            <ul class="promotions">
+                                                                <li>
+                                                                    <em>聚划算</em>
+                                                                    <strong class="ju-price"></strong>元
+                                                                    <span class="ju-prompt hidden">卖家限制最多预订间夜</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="unit">
+                                                    <div class="l">月销量</div>
+                                                    <div class="r">
+                                                        <span id="J_MonthSalesCount">2</span>笔
+                                                    </div>
+                                                </li>
+                                                <li class="unit">
+                                                    <div class="l">评价</div>
+                                                    <div class="r">
+                                                        <a id="J_ReviewTabTrigger" href="javascript:;"> <font class="J_ReviewCount">0</font>条评价</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="hotel-meta special-area tb-clear">
+                                                <li class="change-tips" id="J_ChangeTips">请关注宝贝详情和价格变化</li>
+                                                <li class="unit first">
+                                                    <div class="l">入住时段</div>
+                                                    <div class="r">
+                                                        <input type="text" name="start" class="ipt-date J_Placeholder" id="J_CheckIn" placeholder="YYYY-MM-YY" value="2013-12-09" readonly="readonly" />
+                                                        -
+                                                        <input type="text" name="end" class="ipt-date J_Placeholder" id="J_CheckOut" placeholder="YYYY-MM-YY" value="2013-12-12" readonly="readonly" />
+                                                        <span class="total-nigth">共<strong id="J_TotalNight">0</strong>晚</span>
+                                                    </div>
+                                                </li>
+                                                <li class="unit">
+                                                    <div class="l">房间数量</div>
+                                                    <div class="r">
+                                                        <label style="float:left;">
+                                                            <select id="J_RoomNum" class="sel-room" name="roomnum">
+                                                                <option value="1" selected="selected" >1</option>
+                                                                <option value="2" >2</option>
+                                                                <option value="3" >3</option>
+                                                            </select>
+                                                        </label>
+                                                        <span id="J_RoomStatus" class="room-less"></span>
+                                                    </div>
+                                                </li>
+                                                <li class="unit">
+                                                    <div class="l">房型</div>
+                                                    <div class="r" id="J_RoomType">
+                                                        <ul class="hotel-sku room-type tb-clear">
+                                                            <li class="selected">
+                                                                <a href="javascript:;">标准房</a>
+                                                                <i></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="unit">
+                                                    <div class="l">价格政策</div>
+                                                    <div class="r" id="J_PricePolicy">
+                                                        <ul class="hotel-sku price-policy tb-clear">
+                                                            <li class="J_Rate" data-value="375893954">
+                                                                <a href="javascript:;"><span class="price"><em>&yen;</em>827</span>标准价不含早不能退 - <span class="gray">预付</span></a>
+                                                                <i></i>
+                                                            </li>
+                                                            <li class="J_Rate" data-value="375892954">
+                                                                <a href="javascript:;"><span class="price"><em>&yen;</em>950</span>连住3晚含双早 - <span class="gray">预付</span></a>
+                                                                <i></i>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="price-policy-content">
+                                                            <ul class="price-policy-pannel">
+                                                                <li><span class="tit">赠送礼包</span>预订赠送：<span class="desc">111每客送欢迎冷饮一杯</span></li>
+                                                            </ul>
+                                                            <ul class="price-policy-pannel">
+                                                                <li><span class="tit">赠送礼包</span>预订赠送：<span class="desc">222每客送欢迎冷饮一杯</span></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul id="J_HotelPayArea" class="hotel-meta pay-area tb-clear">
+                                                <li class="unit">
+                                                    <div class="pay-type">
+                                                        在线支付：<strong id="J_OnlinePay">0.00</strong>元，到店支付：<strong id="J_HotelPay" class="hotel-pay">200.00</strong>元<span id="J_CashbackPay" class="hidden">，离店返现：<strong id="J_CashbackNum" class="hotel-pay">0.00</strong>元</span>
+                                                    </div>
+                                                    <div id="J_ETao" class="etao hidden">
+                                                        通过一淘购买<strong>送<span id="J_EtaoJF"></span>个集分宝</strong>(确认收货后到账)
+                                                    </div>
+                                                    <div class="hotel-msg hidden">
+                                                        <p id="J_ErrorMsg" class="error-msg"></p>
+                                                    </div>
+                                                    <div class="hotel-msg hidden">
+                                                        <p id="J_WarningMsg" class="warning-msg"></p>
+                                                    </div>
+                                                    <div class="btns ">
+                                                        <input id="J_BuyBtn" type="submit" class="buy-btn" value="" />
+                                                    </div>
+                                                    <div id="J_PrePayTips" class="tips  hidden ">
+                                                        请选择正确的入住时段，我们会在您离店<strong>3天后付款</strong>给卖家
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div id="J_HotelCantBuy" class="hotel-cant-buy hidden"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tb-shopinfo">
+                                    <div class="inner trip-seller">
+                                        <div title="淘宝网将保障您的购物资金和运费安全" class="intro"></div>
+                                        <div class="shop-card">
+                                            <p>
+                                                <a href="http://rate.daily.taobao.net//user-rate-4f6602c24a8cdb4c29966670a7bff6f4.htm" class="hCard fn" title="0307vvb1">0307vvb1</a>
+                                                <span class="J_WangWang" data-nick="0307vvb1" data-tnick="" data-encode="true" data-display="inline"></span>
+                                            </p>
+                                        </div>
+                                        <div class="shop-rate">
+                                            <h4>
+                                                动态评分<span class="compare">与同行比</span>
+                                            </h4>
+                                            <ul>
+                                                <li>
+                                                    描述相符:<a target="_blank" href="http://rate.daily.taobao.net//user-rate-4f6602c24a8cdb4c29966670a7bff6f4--receivedOrPosted|0--buyerOrSeller|0.htm">
+                                                        <em class="count" title="4.8分">4.8</em>
+                                                        <span class="rateinfo" title="计算规则:(同行业平均分-店铺得分)/(同行业平均分-同行业店铺最低得分)"> <b>高于</b>
+                                                            <em>77.53%</em>
+                                                        </span></a>
+                                                </li>
+                                                <li>
+                                                    服务态度:<a target="_blank" href="http://rate.daily.taobao.net//user-rate-4f6602c24a8cdb4c29966670a7bff6f4--receivedOrPosted|0--buyerOrSeller|0.htm">
+                                                        <em class="count" title="4.8分">4.8</em>
+                                                        <span class="rateinfo" title="计算规则:(同行业平均分-店铺得分)/(同行业平均分-同行业店铺最低得分)"> <b>高于</b>
+                                                            <em>80.20%</em>
+                                                        </span></a>
+                                                </li>
+                                                <li>
+                                                    发货速度:<a href="http://rate.daily.taobao.net//user-rate-4f6602c24a8cdb4c29966670a7bff6f4--receivedOrPosted|0--buyerOrSeller|0.htm" target="_blank">
+                                                        <em class="count" title="4.8分">4.8</em>
+                                                        <span class="rateinfo" title="计算规则:(同行业平均分-店铺得分)/(同行业平均分-同行业店铺最低得分)">
+                                                            <b>高于</b>
+                                                            <em>75.00%</em>
+                                                        </span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="shop-details">
+                                            <ul class="shop-attach">
+                                                <li class="goodrate">
+                                                    <span class="item-num">宝贝数: 2060</span>
+                                                </li>
+                                                <li class="setuptime">
+                                                    <span>创店时间:</span>2011-02-25
+                                                </li>
+                                                <li class="honours">
+                                                    <a href="http://www.taobao.com/go/act/sale/kadepay.php?ad_id=&am_id=&cm_id=14001249574b437a411d&pm_id=&spm=2013.1.1000126.9" target="_blank"><img src="http://img01.taobaocdn.com/tps/i1/T1NddsXfFoXXXXXXXX-24-20.png" align="absmiddle" border="0" title="本店支持信用卡直接付款" alt="本店支持信用卡直接付款"></a>
+                                                    <a href="http://service.taobao.com/support/5-27-357/help-1035.htm?spm=2013.1.1000126.12" target="_blank"><img src="http://img.taobaocdn.com/zfb_person_small.gif" onerror="this.src='http://img04.taobaocdn.com/tps/i4/T15jvNXolfXXblKhDf-42-21.png'" border="0" align="absmiddle" alt="支付宝实名认证" title="支付宝实名认证"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="shop-other">
+                                            <span class="tb-enter J_Hover">
+                                                <a target="_blank" href="http://store.daily.taobao.net/view_shop-4f6602c24a8cdb4c29966670a7bff6f4.htm" class="tb-enter-shop">进入店铺</a>
+                                            </span>
+                                            <i class="sep"></i>
+                                            <span class="tb-operate J_Hover">
+                                                <a id="J_HotelFavShop" data-height="260" data-width="440" data-closebtn="true" href="http://favorite.taobao.com/popup/add_collection.htm?id=45656345&itemid=2100502337305&itemtype=0&ownerid=2024098454&_tb_token_=3RvROsnm" mercury:params="id=45656345&itemid=2100502337305&itemtype=0&ownerid=2024098454" class="tb-fav J_PopupTrigger collection xshop_sc J_HotelFavTrigger J_TokenSign">
+                                                    收藏店铺<em class="arrow"></em>
+                                                </a>
+                                                <a id="J_HotelShareShop" target="_blank" href="http://share.jianghu.taobao.com/share/addShare.htm?id=45656345&amp;type=10&amp;url=http://funtrip.taobao.com&amp;spm=2013.1.1000126.23" class="tb-shared share-jianghu">分享店铺</a>
+                                            </span>
+                                        </div>
+                                        <div id="shop-rank-popup" class="shop-rank-popup">
+                                            <b></b>
+                                            <p class="shop-date">从 2008/01/01 起至今</p>
+                                            <p>虚拟宝贝交易:<em>0%</em></p>
+                                            <p>实物宝贝交易:<em>100%</em></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- detail end -->
+                    <div id="J_PromotionsHotel"></div>
+                    <div id="J_PromotionsShop" class="promotions-shop"></div>
+                    <div class="layout grid-s5m0 expanded">
+                        <div class="col-main clearfix">
+                            <div class="main-wrap J_TRegion">
+                                <!-- Tab Strat -->
+                                <div id="J_HotelTab" class="hotel-tab" class="tb-clear">
+                                    <ul>
+                                        <li class="J_Tab"><a href="javascript:;">宝贝详情</a></li>
+                                        <li class="J_Tab"><a href="javascript:;">酒店详情</a></li>
+                                        <li class="J_Tab"><a href="javascript:;">成交记录(<span id="J_RecordCount">2</span>)</a></li>
+                                    </ul>
+                                    <div class="shadow"></div>
+                                    <span class="J_WangWang" data-nick="0307vvb1" data-tnick="" data-encode="true" data-display="inline"></span>
+                                </div>
+                                <div id="J_HotelTabSummary" class="hotel-tab-summary">
+                                    <div class="J_Summary attribute">
+                                        <div class="hotel-intro"></div>
+                                        <div id="J_ItemAttribute">
+                                            <ul class="attr-list">
+                                                <li>早餐: 无早</li>
+                                                <li>床型: 双床/大床</li>
+                                                <li>宽带: 收费宽带</li>
+                                                <li class="last">服务设施: 有线电视，独立卫生间</li>
+                                                <li class="last row">发票: 有发票，旅行社代订房费发票</li>
+                                                <li class="last row">发票说明: 快递费到付</li>
+                                                <li class="last row">
+                                                    <div class="refund-title">退订政策:</div>
+                                                    <div class="refund-content"><p>不能退</p></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="J_Summary hidden hotel-name">
+                                        <div class="hotel-intro">
+                                            <p class="name"><strong>北京唐悦酒店</strong><em class="star-icon kezhan"></em></p>
+                                            <p class="address">北京市东城区东华门大街52-54号（紧邻故宫东华门）</p>
+                                        </div>
+                                    </div>
+                                    <div class="J_Summary hidden review-score">
+                                        <div class="item-score">宝贝与描述相符<strong id="J_Scores">4.8</strong>分<span>共<i id="J_Reviews">1000</i>次打分</span></div>
+                                        <div class="review-r-link">
+                                            <a class="r-shoprate" href="http://rate.daily.taobao.net//user-rate-2024098454.htm#dynamic-rate" target="_blank"><i></i>店铺评价</a>
+                                        </div>
+                                    </div>
+                                    <div class="J_Summary hidden list-price">
+                                        <p>原价：<strong class="J_TotalPrice">200.00</strong>元<span>拍下价格的不同可能会由促销和打折引起的，详情可以咨询卖家。</span></p>
+                                    </div>
+                                </div>
+                                <div id="J_HotelTabBox" class="hotel-tab-box">
+                                    <!-- 宝贝详情 -->
+                                    <div class="J_TabBox item-desc" id="J_ItemDesc"></div>
+                                    <div class="title">购买须知</div>
+                                    <!-- 购买须知 -->
+                                    <div id="J_HowToBuy" class="how-to-buy">
+                                        1.报价为中宾价（中国内地居民适用），港澳或外国客人价格另查；</br>2.标有实价有房的酒店宝贝价格准确，可直接预订，未标有实价有房的酒店宝贝价格可供参考，预订以客服报价为准；</br>3.入住时间一般为14：:00，退房时间为12:00，个别酒店例外例如迪士尼酒店入住15:00，退房11:00；凭港澳通行证办理入住；酒店不接受未满18岁人士单独入住；</br>4.全额预付房费的酒店，订单一经确认，买家保证全段入住；任何主、客观原因导致无法抵达或不住酒店，买家均保证支付全额房款。</br>5.入住有问题，须及时联系客服协调；不联系客服擅自离去，房间空置房费照收。
+                                    </div>
+                                    <div class="title">酒店详情</div>
+                                    <!-- 酒店详情 -->
+                                    <div class="J_TabBox hotel-desc">
+                                        <dl>
+                                            <dt>酒店介绍：</dt>
+                                            <dd>　　北京唐悦酒店是一家位于王府井中心地带的涉外经济型酒店，紧邻故宫东华门。由酒店向西步行数分钟可至东华门，故宫护城河即可映入眼帘，沿护城河继续穿行，垂柳拂面，可览古老城墙的沧桑，诗情画意尽在其中，蓦然间雄伟壮丽的故宫已在眼前。酒店周边其他旅游名胜云集，购物观光十分便捷，毗邻王府井步行街、著名的王府井天主堂&mdash;&mdash;东堂等名胜，去往天安门广场、国家大剧院等地亦非常便利。　　酒店无论是大堂接待区，还是客房的装饰都别具一格，尽显精致、时尚。酒店拥有标准间、豪华间等不同风格的客房，房间内设施齐全，全部配置宽带上网，提供24小时热水、国内国际长途电话、有线电视，闹中取静，优雅环境，是宾客旅行、商务居住之选。　　酒店开业时间2006年7月12日，2010年12月新装修，楼高3层，客房总数66间（套）。【温馨提示】酒店无停车场。</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>酒店地址：</dt>
+                                            <dd>北京市东城区东华门大街52-54号（紧邻故宫东华门）</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>酒店地图：</dt>
+                                            <dd><div class="hotel-map" id="J_HotelMap"></div></dd>
+                                            <script >
+                                            // 加载地图
+                                            KISSY.use('hotel-item/mods/hotel-map', function(S, Map) {
+                                                new Map({
+                                                    lat: 39.8889,
+                                                    lng: 116.34058,
+                                                    name: '北京希尔顿逸林酒店'
+                                                });
+                                            });
+                                            </script>
+                                        </dl>
+                                        <div class="legal-tips">酒店详情由淘宝根据公开信息整理而成，并非卖家对宝贝的承诺，仅供您参考，不能作为投诉维权的依据。实际情况请以卖家描述的宝贝详情为准。(<a href="http://ur.taobao.com/survey/view.htm?id=1599" style="color:#36C;">纠错请点击</a>)</div>
+                                    </div>
+
+                                    <div class="title">成交记录</div>
+                                    <!-- 成交记录 -->
+                                    <div class="J_TablazyLoad J_TabBox record-box" id="J_RecordBox" data-value="loadRecord"></div>
+                                </div>
+                                <!-- Tab End -->
+                            </div>
+                            <!-- 右侧装修 -->
+                            <!--right,cacheAt:2013-12-03 15:05:14,ip:10.232.10.68-->
+                            <div class="col-main clearfix">
+                                <div class="main-wrap J_TRegion"></div>
+                            </div>
+                            <div class="main-wrap">
+                                <div id="official-remind">
+                                    <dl class="tb-security">
+                                        <dt>安全提示：</dt>
+                                        <dd>
+                                            <p>交易过程中请勿随意接收卖家发送的可疑文件，请勿点击不明来源的链接，付款前请务必详细核对支付信息。</p>
+                                            <p>推荐安全软件：
+                                                <span><img alt="搜狗浏览器" src="http://img01.taobaocdn.com/tps/i1/T1hTaeXn8XXXXXXXXX-16-16.png"><a href="http://123.taobao.com/sogou/?spm=1.69598.235062.1">搜狗浏览器</a> </span>
+                                                <span><img alt="手机密令" src="http://img04.taobaocdn.com/tps/i4/T1BYCyXj8xXXXXXXXX-16-16.png"><a href="http://110.taobao.com/product/dkey_detail.htm?spm=1.69598.235062.">手机密令</a> </span>
+                                                <span><img alt="360网盾" src="http://img03.taobaocdn.com/tps/i3/T1a_aeXoNXXXXXXXXX-16-16.png"><a href="http://www.taobao.com/go/chn/safe/911.php?spm=1.69598.235062.3">360网盾</a> </span>
+                                                <span><img alt="QQ电脑管家" src="http://img04.taobaocdn.com/tps/i4/T1rPavXgldXXXXXXXX-16-16.png"><a href="http://www.taobao.com/go/chn/safe/911.php?spm=1.69598.235062.4">QQ电脑管家</a> </span>
+                                                <a target="_blank" href="http://www.taobao.com/go/chn/safe/911.php?spm=1.69598.235062.5">安全软件中心&gt;&gt;</a>
+                                            </p>
+                                        </dd>
+                                    </dl>
+                                    <dl class="tb-exemption">
+                                        <dt>免责声明：</dt>
+                                        <dd>淘宝网所展示的宝贝供求信息由买卖双方自行提供，其真实性、准确性和合法性由信息发布人负责。淘宝网不提供任何保证，并不承担任何法律责任。淘宝网友情提醒：为保障您的利益，请网上成交，贵重宝贝，请使用<a target="_blank" href="http://www.taobao.com/strade/strade.php?spm=1.69598.147873.6">支付宝</a>交易。</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 左侧装修 -->
+                        <!--left,cacheAt:2013-12-03 15:05:14,ip:10.232.10.68-->
+                        <div class="col-sub J_TRegion">
+                            <!-- module-cache-info: module: shop.shopArchive:1.0-b2c,moduleId=3641644, key: user-2024098454-prototype-13-20120326 cacheArea: 208 cachedTime: 2013-12-03 15:05:14 aliveTime: 28800 AppIP:10.232.10.68 -->
+                            <div class="box J_TBox tshop-psm tshop-psm-ssa10b" id="side-shop-info" style="display:none"  data-spm='110.0.13-3641644'  microscope-data='13-3641644' >
+                                <div class="shop-basic">
+                                    <div class="hd"><h3><span>商家信息</span></h3></div>
+                                    <div class="bd">
+                                        <div class="shop-promise">
+                                            <p><img alt="淘宝商城，品质保证" src="http://img01.taobaocdn.com/tps/i1/T1k_CnXktIXXXXXXXX-175-41.png"></p>
+                                            <ul>
+                                                <li><a href="http://www.tmall.com/go/chn/mall2010/promise.php#ZPBZ" target="_blank">正品保障</a></li>
+                                                <li><a href="http://www.tmall.com/go/chn/mall2010/promise.php#TGFP" target="_blank">提供发票</a></li>
+                                                <li id="J_7day" class="last"><a href="http://www.tmall.com/go/chn/mall2010/promise.php#QTTH" target="_blank">七天退换</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="shop-type">
+                                            <p class="join-3c">
+                                                <i></i>商家已加入<a href="http://3c.tmall.com" target="_blank">淘宝电器城</a>
+                                            </p>
+                                        </div>
+                                        <div class="shop-intro">
+                                            <div class="name">
+                                                <span>tworkb3104店铺</span>
+                                            </div>
+                                            <div class="shop-rate">
+                                                <h4>店铺动态评分
+                                                    <span class="compare">与同行业相比</span>
+                                                </h4>
+                                                <ul>
+                                                    <li>
+                                                        描述相符：<a target="_blank" href="http://rate.daily.taobao.net//user-rate-4f6602c24a8cdb4c29966670a7bff6f4.htm"><em class="count" title="4.8分">4.8</em>
+                                                        <span class="rateinfo" title=" 计算规则:(店铺得分-同行业平均分)/(同行业店铺最高得分-同行业平均分) ">
+                                                            <b>高于</b><em>77.53%</em>
+                                                        </span></a>
+                                                    </li>
+                                                    <li>
+                                                        服务态度：<a target="_blank" href="http://rate.daily.taobao.net//user-rate-4f6602c24a8cdb4c29966670a7bff6f4.htm"><em class="count" title="4.8分">4.8</em>
+                                                        <span class="rateinfo" title=" 计算规则:(店铺得分-同行业平均分)/(同行业店铺最高得分-同行业平均分) ">
+                                                            <b>高于</b><em>80.20%</em>
+                                                        </span></a>
+                                                    </li>
+                                                    <li>
+                                                        发货速度：<a target="_blank" href="http://rate.daily.taobao.net//user-rate-4f6602c24a8cdb4c29966670a7bff6f4.htm"><em class="count" title="4.8分">4.8</em>
+                                                        <span class="rateinfo" title=" 计算规则:(店铺得分-同行业平均分)/(同行业店铺最高得分-同行业平均分) ">
+                                                            <b>高于</b><em>75.00%</em>
+                                                        </span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="extend">
+                                                <ul>
+                                                    <li>
+                                                        <label>公 司 名：</label>OXVVOPLF公司
+                                                    </li>
+                                                    <li class="locus">
+                                                        <label>所 在 地：</label>河北,  保定
+                                                    </li>
+                                                    <li class="shopkeeper">
+                                                        <label>商&nbsp;&nbsp;&nbsp;&nbsp;家：</label><a href="http://rate.daily.taobao.net//user-rate-4f6602c24a8cdb4c29966670a7bff6f4--receivedOrPosted|0--buyerOrSeller|1.htm">0307vvb1</a>
+                                                    </li>
+                                                    <li>
+                                                        <label>客&nbsp;&nbsp;&nbsp;&nbsp;服：</label>
+                                                        <span class="J_WangWang" data-nick="0307vvb1" data-tnick="" data-encode="true" data-display="inline"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="other">
+                                                <a class="enter" href="http://oxvvoplf.daily.tmall.net/" title="进入掌柜的店铺" target="_blank"><span style="display:none;">进入掌柜的店铺</span></a>
+                                            </div>
+                                        </div>
+                                        <div id="J_Shopsearch" style="display:none" class="shop-search"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 底部装修 -->
+            <!--ft,cacheAt:2013-12-03 15:05:14,ip:10.232.10.68-->
+            <div class="tb-shop" id="ft">
+                <div class="layout grid-m" >
+                    <div class="col-main">
+                        <div class="main-wrap J_TRegion" data-modules="main" data-width="f950">
+                            <!-- module-cache-info: module: shop.shopFoot:1.0-common,moduleId=3641627, key: module-3641627-prototype-36-20120307 cacheArea: 208 cachedTime: 2013-12-03 15:05:14 aliveTime: 28800 AppIP:10.232.10.68 -->
+                            <div class="box J_TBox"  data-spm='110.0.36-3641627'  microscope-data='36-3641627'>
+                                <div class="shop-custom no-border">
+                                    <div class="bd">
+                                        <div class="custom-area">
+                                            This is f<strong><font style="font-size:36pt;">ooter.wow</font></strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- from vmcommon -->
+        <div id="footer">
+            <!-- c2c_column start -->
+            <div class="c2c_column clearfix">
+                <a href="http://www.taobao.com/go/act/315/xb_20100707.php?spm=1.41461.135395.1&ad_id=&am_id=1300268931aef04f0cdc&cm_id=&pm_id=#rushi" target="_blank" class="cp_logo" ><img src="http://img04.taobaocdn.com/tps/i4/T1FqRVXo4JXXXXXXXX.png" alt="消费者保障" /></a>
+                <dl class="ensure">
+                    <dt><em>消费者保障</em></dt>
+                    <dd>
+                        <ul>
+                            <li><a href="http://www.taobao.com/go/act/315/xb_20100707.php?spm=1.41461.135395.2&ad_id=&am_id=1300268931aef04f0cdc&cm_id=&pm_id=#rushi" target="_blank">保障范围</a></li>
+                            <li><a href="http://service.taobao.com/support/knowledge-1119776.htm?spm=1.41461.135395.3" target="_blank">退货退款流程</a></li>
+                            <li><a href="http://315.taobao.com/?spm=1.41461.135395.4" target="_blank">消费警示</a></li>
+                            <li><a href="http://support.taobao.com/myservice/rights/right_main.htm?spm=1.41461.135395.5" target="_blank">我要发起维权</a></li>
+                            <li><a href="http://www.taobao.com/go/act/315/xb_20100707.php?spm=1.41461.135395.6&ad_id=&am_id=1300268931aef04f0cdc&cm_id=&pm_id=#rushi" target="_blank">更多特色服务</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="newbie">
+                    <dt><em>新手上路</em></dt>
+                    <dd>
+                        <ul>
+                            <li><a href="http://www.taobao.com/help/buy_step1_01.html?spm=1.41461.135395.7" target="_blank">新手学堂</a></li>
+                            <li><a href="http://member1.taobao.com/member/new_register.jhtml?spm=1.41461.135395.8&from=&ex_info=&ex_sign=" target="_blank">新手注册</a></li>
+                            <li><a href="http://www.taobao.com/go/act/vip/newer/guidepage.php?spm=1.41461.135395.9" target="_blank">新手体验专区</a></li>
+                            <li><a href="http://bbs.taobao.com/catalog/424023-49511-1.htm?spm=1.41461.135395.10#ThreadList" target="_blank">交易安全</a></li>
+                            <li><a href="http://service.taobao.com/support/minerva/robot_main.htm?spm=1.41461.135395.11&sourceId=113&businessId=100&moduleGroupId=taobaocrm" target="_blank">24小时在线帮助</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="payment">
+                    <dt><em>付款方式</em></dt>
+                    <dd>
+                        <ul>
+                            <li><a href="http://help.alipay.com/lab/help_detail.htm?help_id=245296" target="_blank">支付宝快捷支付</a></li>
+                            <li><a href="http://help.alipay.com/lab/help_detail.htm?help_id=251547" target="_blank">支付宝余额付款</a></li>
+                            <li><a href="http://help.alipay.com/lab/help_detail.htm?help_id=253912" target="_blank">支付宝卡付款</a></li>
+                            <li><a href="http://cod.taobao.com/?spm=1.41461.135395.15" target="_blank">货到付款</a></li>
+                            <li><a href="http://abc.alipay.com/cool/fastPayment.htm" target="_blank">新人支付</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="recommend">
+                    <dt><em>特色市场推荐</em></dt>
+                    <dd>
+                        <ul>
+                            <li><a target="_blank" href="http://love.taobao.com/?spm=1.41461.135395.17">我要买</a><span>发现 分享 购物</span></li>
+                            <li><a target="_blank" href="http://jie.taobao.com/?spm=1.41461.135395.18">店铺街</a><span>轻轻松松找好店</span></li>
+                            <li><a target="_blank" href="http://global.taobao.com/?spm=1.41461.135395.19">全球购</a><span>100%海外精品</span></li>
+                            <li><a target="_blank" href="http://nvzhuang.taobao.com/market/nvzhuang/indextest.php?spm=1.41461.135395.20">女装市场</a><span>各色女装集散地</span></li>
+                            <li><a target="_blank" href="http://ju.atpanel.com/?url=http://list.taobao.com/browse/cat-0.htm?spm=1.41461.135395.21&id=woyaomai&ad_id=&am_id=&cm_id=&pm_id=15004366061cf57b9b72">更多特色市场</a><span></span></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <!-- c2c_column end -->
+            <div class="g_foot" >
+                <div class="g_foot-ali">
+                    <a href="//news.alibaba.com/specials/aboutalibaba/aligroup/index.html">阿里巴巴集团</a>
+                    <b>|</b>
+                    <a href="//www.alibaba.com">阿里巴巴国际站</a>
+                    <b>|</b>
+                    <a href="//www.1688.com">阿里巴巴中国站</a>
+                    <b>|</b>
+                    <a href="//www.aliexpress.com">全球速卖通</a>
+                    <b>|</b>
+                    <a href="//www.taobao.com/index_global.php">淘宝网</a>
+                    <b>|</b>
+                    <a href="//www.tmall.com">天猫</a>
+                    <b>|</b>
+                    <a href="//ju.taobao.com">聚划算</a>
+                    <b>|</b>
+                    <a href="//www.etao.com">一淘</a>
+                    <b>|</b>
+                    <a href="//www.alimama.com">阿里妈妈</a>
+                    <b>|</b>
+                    <a href="//www.aliyun.com">阿里云计算</a>
+                    <b>|</b>
+                    <a href="//www.yunos.com">云OS</a>
+                    <b>|</b>
+                    <a href="//www.net.cn">万网</a>
+                    <b>|</b>
+                    <a href="//cn.yahoo.com">中国雅虎</a>
+                    <b>|</b>
+                    <a href="//www.alipay.com">支付宝</a>
+                </div>
+                <div class="g_foot-nav">
+                    <a href="http://www.taobao.com/about/">关于淘宝</a>
+                    <a href="http://www.taobao.com/about/partners.php">合作伙伴</a>
+                    <a href="http://pro.taobao.com/">营销中心</a>
+                    <a href="http://service.taobao.com/support/main/service_route.htm">联系客服</a>
+                    <a href="http://open.taobao.com/">开放平台</a>
+                    <a href="http://www.taobao.com/about/join.php">诚征英才</a>
+                    <a href="http://www.taobao.com/about/contact.php">联系我们</a>
+                    <a href="http://www.taobao.com/sitemap.php">网站地图</a>
+                    <a href="http://www.taobao.com/about/copyright.php">法律声明</a>
+                    <span>&copy; 2013 Taobao.com 版权所有</span>
+                </div>
+                <span class="g_foot-toy"></span>
+                <span class="g_foot-line"></span>
+            </div>
+            <div id="server-num">v127156.sqa.cm4.tbsite.net</div>
+        </div>
+        <!-- end vmcommon -->
+        <script>
+            var _hotel_data = {"sn":"1","detail":{"code":200,"msg":null,"checkIn":"2013-12-09","checkOut":"2013-12-12","avgPrice":82666,"totalPrice":248000,"totalOnlinePay":248000,"totalShopPay":0,"nights":3,"rates":[{"name":"标准价不含早不能退","selected":true,"rateid":375893954,"avgPrice":82666,"payType":"预付","totalPrice":248000,"cancelPolicy":"任意退","breakfast":"不含早","sjyf":false,"rpid":1072001954,"hasGift":true,"gifts":[{"name":"每客送欢迎冷饮一杯","id":346003954,"type":1,"desc":"每客送欢迎冷饮一杯"}]},{"name":"连住3晚含双早","selected":false,"rateid":375892954,"avgPrice":95000,"payType":"预付","totalPrice":285000,"cancelPolicy":"提前48小时退订，收取订单总额5%的违约金；提前24小时退订，收取订单总额10%的违约金","breakfast":"含双早","sjyf":false,"rpid":1072004954,"hasGift":true,"gifts":[{"name":"每客送欢迎冷饮一杯","id":346003954,"type":1,"desc":"每客送欢迎冷饮一杯"}]}],"selectedRid":11139027954,"selectedRateId":375893954,"minAvailRoomNum":1,"maxAvailRoomNum":9,"roomnum":1,"roomTypes":[{"name":"标准房","selected":false,"gid":10315469954,"rid":11139027954,"iid":2100504667938,"srid":10699460,"cantSell":false,"sellCount":1,"maxCanSellNum":1}]}};
+            KISSY.use('hotel-item/mods/', function (S, HotelItem) {
+                HotelItem.init();
+            });
+        </script>
+</body>
+</html>

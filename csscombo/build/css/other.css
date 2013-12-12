@@ -1,0 +1,360 @@
+/*
+combined files : 
+
+*/
+
+/**
+ * @change log:
+ * 2011-04-14，恢复switchbar的样式
+ * 2011-06-09，detail增加安全提醒，by changtian
+ * 2011-06-23，调整反馈的样式，by changtian
+ */
+#bd .switch-bar span {
+    background: url(http://img02.taobaocdn.com/tps/i2/T1bYFZXdNiXXXXXXXX-75-63.png) no-repeat;
+}
+
+
+
+
+/* #wangpu-copyright：------------------------------------------------------- {{{ */
+#wangpu-copyright {
+    padding: 10px 0;
+    text-align: center;
+    background-color: #fff;
+}
+/* #wangpu-copyright END ------------------------------------------------------- }}} */
+
+
+
+/* #ft：------------------------------------------------------- {{{ */
+#ft {
+    text-align: center;
+}
+/* #ft END ------------------------------------------------------- }}} */
+
+
+
+/* #feedback：------------------------------------------------------- {{{ */
+#feedback {
+    width: 950px;
+    margin: 10px auto;
+}
+/* #feedback END ------------------------------------------------------- }}} */
+
+
+
+/* .switch-bar：折叠/展开左侧栏 ------------------------------------------------------- {{{ */
+#bd .switch-bar {
+    position: fixed;
+    z-index: 10;
+    width: 11px;
+    margin-left: -20px;
+    overflow: hidden;
+    _position: absolute;
+}
+#bd .switch-bar a {
+    display: block;
+    width: 10px;
+    height: 800px;
+    border-right: 1px solid #F6EA89;
+    outline: none;
+}
+#bd .switch-bar span {
+    position: absolute;
+    top: 360px;
+    left: 0;
+    z-index: 10;
+    width: 10px;
+    height: 48px;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+#bd .switch-bar a:hover span {
+    cursor: pointer;
+    background-position: -14px 0;
+}
+#bd .expanded .switch-bar {
+    margin-left: 0;
+}
+#bd .expanded .switch-bar a {
+    border-right: none;
+    border-left: 1px solid #F6EA89;
+}
+#bd .expanded .switch-bar span {
+    background-position: -28px 0;
+}
+#bd .expanded .switch-bar a:hover span {
+    background-position: -42px 0;
+}
+#bd .expanded .main-wrap {
+    margin-left: 0;
+}
+#bd .expanded .col-sub {
+    display: none;
+}
+/* .switch-bar END ------------------------------------------------------- }}} */
+
+
+
+/* .go-top：到顶部 ------------------------------------------------------- {{{ */
+.go-top {
+    position: fixed;
+    top: -1px;
+    right: -63px;
+    width: 31px;
+    height: 36px;
+    _position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: alpha(opacity=0);
+    z-index: 90001;
+}
+
+.go-top a {
+    display: block;
+    width: 31px;
+    height: 36px;
+    outline: none;
+    background: url(http://img04.taobaocdn.com/tps/i4/T1_2GFXn4dXXXXXXXX-31-72.png) no-repeat;
+}
+
+.go-top a:hover {
+    background-position: 0 -36px;
+}
+
+.go-top a span {
+    display: none;
+}
+/* .go-top END ------------------------------------------------------- }}} */
+
+
+
+/* #official-remind： ------------------------------------------------------- {{{ */
+#official-remind {
+    clear: both;
+    margin-top: 20px;
+    padding: 10px;
+    background: #ffffe5;
+    border: 1px solid #ffcc7f;
+}
+#official-remind dl {
+    padding-left: 68px;
+    line-height: 2;
+    *zoom: 1;
+}
+#official-remind dl:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+#official-remind dt {
+    display: inline;
+    float: left;
+    width: 68px;
+    margin-left: -68px;
+    font-weight: bold;
+}
+#official-remind .tb-security {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffe8ca;
+}
+#official-remind .tb-security span {
+    margin-right: 10px;
+    color: #999;
+}
+#official-remind .tb-security img {
+    margin-right: 2px;
+    vertical-align: middle;
+}
+/* #official-remind END ------------------------------------------------------- }}} */
+
+
+/* 双十二需求 .tb-buyer-active start ----------------------------- {{{ */
+/**
+ * detail 12.12 关联营销 促销
+ * @author 倪云建 <niyunjian.pt@taobao.com>
+ * tb-detail1212-related 为独立样式，.tb-detail1212-com为通用样式
+ */
+
+
+.tb-detail1212-related {
+    width: 100%;
+}
+
+.tb-detail1212-com .hd {
+    height: 20px;
+    position: relative;
+}
+
+.tb-detail1212-com .hd h4 {
+
+    position: absolute;
+    left: 24px;
+    height: 28px;
+    width: 170px;
+    color: #D61810;
+    background: #FFDE08 url(http://img03.taobaocdn.com/tps/i3/T1x7mDXiXmXXXXXXXX-170-25.png);
+    text-indent: -9999px;
+}
+
+.tb-detail1212-com .hd p {
+
+    float: right;
+    color: #636363;
+}
+
+.tb-detail1212-com .bd {
+    width: 100%;
+    overflow: hidden;
+    background: #D61810 url(http://img03.taobaocdn.com/tps/i3/T152GDXb4RXXXXXXXX-93-97.png) 0;
+    padding: 25px 0 3px 0;
+}
+
+.tb-detail1212-related .bd ul {
+    /* ie6 下 底部多处空间 */
+    zoom: 1;
+}
+
+.tb-detail1212-related .bd ul li {
+    float: left;
+    width: 19%;
+    margin: 0 1% 0 0;
+    *margin-right: 0.9%;
+    overflow: hidden;
+}
+
+.tb-detail1212-related .related-item {
+    width: 120px;
+    margin: auto;
+    text-align: center;
+}
+
+.tb-detail1212-related .related-pic {
+
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+
+}
+
+.tb-detail1212-related .related-pic a {
+    /*非IE的主流浏览器识别的垂直居中的方法*/
+    display: table-cell;
+    vertical-align: middle;
+    /*设置水平居中*/
+    text-align: center;
+
+    /* 针对IE的Hack */
+    *display: block;
+    *font-size: 105px; /*约为高度的0.873，200*0.873 约为175*/
+    *font-family: Arial; /*防止非utf-8引起的hack失效问题，如gbk编码*/
+    width: 120px;
+    height: 120px;
+}
+
+.tb-detail1212-related .related-pic a img {
+
+    vertical-align: middle;
+}
+
+.tb-detail1212-related .related-desc {
+
+    height: 15px;
+    _height: 18px;
+    overflow: hidden;
+    color: white;
+    margin-top: 10px;
+    _margin-top: 7px;
+    line-height: 12px;
+    text-align: left;
+}
+.tb-detail1212-related .related-desc a {
+    color: white;
+}
+.tb-detail1212-related .related-price {
+    font-size: 12px;
+    font-family: arial;
+    text-align: left;
+    color: white;
+    _margin-top: -2px;
+}
+.tb-detail1212-related .related-price em {
+    margin-left: 3px;
+    text-decoration: line-through;
+}
+.tb-detail1212-related .related-promo {
+    margin-top: -5px;
+    font-size: 18px;
+    font-family: arial;
+    text-align: left;
+    color: #FFDE08;
+}
+
+.tb-detail1212-related .related-promo em {
+    margin-left: 5px;
+}
+
+/* 宝贝售罄，更多宝贝在疯抢部分的样式 */
+
+#detail .tb-skin {
+    padding: 15px;
+}
+#detail .tb-skin p.detail1212-late {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#detail .tb-skin p.detail1212-more a {
+    vertical-align: top;
+    font-weight: normal;
+}
+
+/*购买者动态*/
+
+.tb-buyer-active {
+    margin:20px 0;
+}
+
+.tb-buyer-active li {
+    width:33%;
+    float:left;
+    padding:5px 0;
+    text-align:center;
+    height:24px;
+    overflow:hidden;
+}
+
+.tb-buyer-active .bd ul {
+    /* ie7 下 li 子元素不居中的问题 */
+    width: 100%;
+}
+
+.tb-buyer-active .hd {
+    *z-index: 10;
+
+}
+.tb-buyer-active .hd h4 {
+    z-index: 10;
+
+}
+.tb-buyer-active .bd {
+    padding:0;
+    color:white;
+    line-height:24px;
+    height:34px;
+    overflow:hidden;
+    *z-index: 1;
+}
+
+.tb-buyer-active .time {
+    margin-left:12px;
+}
+
+.tb-buyer-active .action {
+    color:#ffe118;
+    margin-left:7px;
+}
+
+/* 双十二需求 .tb-buyer-active end ----------------------------- }}} */

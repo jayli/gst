@@ -1,0 +1,2635 @@
+/**
+ * tabbar中css sprites思路：除了默认展示的tab外，其他tab对应的panel默认是隐藏的，所以，将背景图按panel合并，按需加载。
+ * @by: changtian
+ * @date: 2011-01-25
+ */
+
+/**
+ * 2011-03-09，属性区文本增加溢出显示省略号效果 + fix 宝贝描述图片空隙问题，by changtian
+ * 2011-03-17，修复宝贝描述部分段落之间丢失间距的问题，by changtian
+ * 2011-03-24，改变浏览了还浏览的样式，by changtian
+ * 2011-04-02，C detail优化，by changtian
+ * 2011-04-08，fix左侧栏展开/折叠问题，by changtian
+ * 2011-04-21，评价详情增加评论时间，by changtian
+ * 2011-05-12，fix浏览了还浏览IE下偶尔错位的问题，by changtian
+ * 2011-05-26，增加食品安全提醒，by changtian
+ * 2011-06-02，改版支付方式，by changtian
+ * 2011-06-23，增加宠物购买提醒 + fix出价记录翻页样式问题 + 增加店铺评价，by changtian
+ * 2011-07-07，成交记录与评价详情反爬虫一期--昵称匿名灰显，by changtian
+ * 2011-07-22，成交记录反爬虫二期 + fix评价详情下拉列表IE67下无法点击的bug，by changtian
+ * 2011-12-07，Tabbar 样式改版 by jianfei
+ */
+
+/* tabbar common style：-------------------------------------------------- {{{ */
+/**
+ * 信息披露模块
+ */
+.tshop-psm {
+    clear:both; /*tabbar 浮动*/
+}
+#deal-record .tb-public {
+    width: 746px;
+    margin-bottom: 20px;
+    padding: 1px;
+    border: 1px solid #d7d7d7;
+    clear:both;
+}
+
+.expanded #deal-record .tb-public {
+    width:946px;
+}
+
+.tshop-psm .tb-public-wrap {
+    width: 726px;
+    padding: 10px;
+    overflow: hidden;
+    background: #f9f9f9;
+    padding-top:20px;
+}
+
+.expanded .tshop-psm .tb-public {
+    width: 946px;
+}
+
+.expanded .tshop-psm .tb-public-wrap {
+    width: 926px;
+}
+/* common style END -------------------------------------------------- }}} */
+
+
+
+/* .tabbar：-------------------------------------------------- {{{ */
+
+.tb-tabbar-wrap {
+    padding:15px 0;
+    position:relative;
+    *zoom:1;
+    *top:1px;
+    bottom:-10px;
+    margin-top:-9px;
+}
+
+.tb-new .tb-tabbar-wrap {
+    padding:0;
+}
+
+#bd .tb-tabbar {
+    height: 34px;
+    border: 1px solid #d7d7d7;
+    width: 748px;
+    background:#fff;
+    font-size:14px;
+}
+
+#bd .expanded  .tb-tabbar {
+    width: 948px;
+}
+
+#bd .tb-tabbar li {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    height:16px;
+    line-height: 16px;
+    margin-right:-1px;
+    border-right:1px solid #d7d7d7;
+    margin-top:8px;
+    _margin-top:10px;
+    _margin-bottom:-4px;
+}
+
+#bd .tb-tabbar .first {
+    border-left: none;
+    margin-left:-1px;
+}
+
+#bd .tb-tabbar .last {
+    height:34px;
+    line-height:34px;
+    margin-top:0;
+}
+
+#bd .tb-tabbar a {
+    display: block;
+    padding: 0 25px;
+    color: #000;
+    outline: none;
+    font-weight:700;
+}
+
+#bd .tb-tabbar a:hover,
+#bd .tb-tabbar a:hover em {
+    color:#f60;
+}
+
+#bd .tb-tabbar a img {
+    display:none;
+}
+
+#bd .tb-tabbar a span {
+    _position:static !important;
+    _top:0 !important;
+}
+
+#bd .tb-tabbar a.other-info span {
+    padding-left:20px;
+    background: url(http://img03.taobaocdn.com/tps/i3/T1DAxKXo8XXXXXXXXX.png) no-repeat left center;
+ }
+
+#bd .tb-tabbar em {
+    font-weight: bold;
+    color: #2853b4;
+}
+
+#bd .tb-tabbar-wrap .shadow {
+    display:none;
+}
+
+#bd .tb-sticky-tabbar {
+    position: fixed;
+    margin: -1px 0 0 0;
+    padding:0;
+    top: 0;
+    z-index: 90000;
+    height:40px;
+    _position: relative;
+}
+
+#bd .tb-tabbar .selected {
+    font-weight: bold;
+    border-left: 0 none;
+    background:#f6f6f6;
+    position:relative;
+    height:36px;
+    line-height:36px;
+    top:-3px;
+    border-top:2px solid #ff6801;
+    border-bottom:0;
+    border-left:1px solid #d7d7d7;
+    border-right:1px solid #d7d7d7;
+    margin-top:0;
+    margin-right:-1px;
+}
+
+#bd .tb-tabbar .selected a:hover {
+    text-decoration:none;
+    color:#000;
+}
+
+#bd .tb-sticky-tabbar .tb-tabbar .selected {
+    top:0;
+    height:33px;
+}
+
+#bd .tb-sticky-tabbar .shadow {
+    background:#f6f6f6;
+    display:block;
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:748px;
+    height:3px;
+    border:1px solid #d6d6d6;
+    border-top:0;
+    overflow:hidden;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#bd .expanded .tb-sticky-tabbar .shadow {
+    width:948px;
+}
+
+/* .tb-tabbar END -------------------------------------------------- }}} */
+
+
+
+/* #attributes：-------------------------------------------------- {{{ */
+#attributes {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background-color: #F6F6F6;
+    border: 1px solid #d7d7d7;
+    border-top-width:0;
+}
+#attributes .cate-warning {
+    width: 100%;
+    overflow: hidden;
+}
+#attributes ul {
+   *zoom: 1;
+}
+#attributes ul:after {
+   visibility: hidden;
+   display: block;
+   clear: both;
+   height: 0;
+   content: "\20";
+}
+#attributes .auth-wrap {
+    clear: both;
+    margin-bottom: 2px;
+    border-bottom: 1px solid #fff;
+}
+#attributes .auth-list {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e6e6e6;
+}
+#attributes .auth-list li {
+    display: inline;
+    float: left;
+    width: 336px;
+    height: 16px;
+    margin-right: 20px;
+    padding: 5px 0;
+    overflow: hidden;
+    text-indent: 5px;
+    white-space: nowrap;
+    color: #000;
+}
+#attributes .auth-list img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+#attributes .attributes-list {
+    clear: both;
+    padding: 0;
+}
+#attributes .attributes-list li {
+    display: inline;
+    float: left;
+    width: 206px;
+    height: 24px;
+    margin-right: 20px;
+    overflow: hidden;
+    text-indent: 5px;
+    line-height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#attributes .authenticate {
+    width: 100%;
+    height: auto;
+}
+#attributes .authenticate ul {
+    margin: -24px 0 0 5em;
+}
+#attributes .authenticate li {
+    width: 110px;
+    height: 100px;
+    white-space: normal;
+}
+/* #attributes END -------------------------------------------------- }}} */
+
+
+
+/* #pet-purchase：宠物购买提醒 -------------------------------------------------- {{{ */
+#pet-purchase .tb-attention {
+    display: block;
+    float: none;
+    padding: 15px;
+    background: #E5F5FF url(http://img01.taobaocdn.com/tps/i1/T1OjWfXklpXXXXXXXX-14-14.png) no-repeat 14px 17px;
+}
+#pet-purchase .tb-attention p {
+    margin-bottom: 10px;
+    text-indent: 20px;
+}
+#pet-purchase .tb-attention em {
+    font-weight: bold;
+}
+#pet-purchase .tb-attention img {
+    vertical-align: middle;
+}
+/* #pet-purchase END -------------------------------------------------- }}} */
+
+
+
+/* #auto-delivery：自动发货-------------------------------------------------- {{{ */
+#auto-delivery {
+    clear: both;
+    margin: 10px 0 0;
+}
+#auto-delivery strong {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+#auto-delivery .section-box{
+    padding: 100px 25px 15px;
+    background: url(http://a.tbcdn.cn/app/tc/img/auto.png) no-repeat 20px 10px;
+    border: 1px solid #D6D6D6;
+}
+#auto-delivery .section-box-s1,
+#auto-delivery .section-box-s2,
+#auto-delivery .section-box-s3 {
+    background-image:url(http://img01.taobaocdn.com/tps/i1/T1X7JjXnd0udOP9cMB-670-66.png);
+}
+#auto-delivery ol li {
+    margin-left: 20px;
+    list-style-type: decimal;
+}
+#auto-delivery ol em {
+    color: #f00;
+}
+/* #auto-delivery END -------------------------------------------------- }}} */
+
+
+
+/* tabbar panel公用样式 -------------------------------------------------- {{{ */
+#bd h4.hd {
+    /*position: relative;*/
+    height: 26px;
+    margin-bottom: -2px;
+    line-height: 26px;
+    text-indent: 2px;
+    font-size: 15px;
+    color: #404040;
+    border-bottom: 2px solid #fe7e01;
+}
+/* tabbar panel公用样式 END -------------------------------------------------- }}} */
+
+
+
+/* #description：宝贝详情 -------------------------------------------------- {{{ */
+#description {
+    margin-bottom: 20px;
+}
+#description .content {
+    width: 100%;
+    padding: 10px 0 0;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+/* #description END -------------------------------------------------- }}} */
+
+
+
+/* .ke-post：-------------------------------------------------- {{{ */
+/**
+ke-post ，编辑器内容外部包装容器
+from : resource: //gre/res/html.css
+@author : yiminghe@gmail.com
+<div class=#bd .ke-post'>
+编辑器生成内容
+</div>
+**/
+/*
+清除编辑器内容里面的浮动
+*/
+#bd .ke-post:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+#bd .ke-post {
+    *zoom: 1;
+}
+#bd .ke-post h1,
+#bd .ke-post h2,
+#bd .ke-post h3,
+#bd .ke-post h4,
+#bd .ke-post h5,
+#bd .ke-post h6,
+#bd .ke-post hr,
+#bd .ke-post p,
+#bd .ke-post blockquote, /* structural elements */
+#bd .ke-post dl,
+#bd .ke-post dt,
+#bd .ke-post dd,
+#bd .ke-post ul,
+#bd .ke-post ol,
+#bd .ke-post li, /* list elements */
+#bd .ke-post pre, /* text formatting elements */
+#bd .ke-post form,
+#bd .ke-post fieldset,
+#bd .ke-post legend,
+#bd .ke-post button,
+#bd .ke-post input,
+#bd .ke-post textarea, /* form elements*/
+#bd .ke-post th,
+#bd .ke-post td /* table elements */
+{
+    margin: 0;
+    padding: 0;
+}
+#bd .ke-post,
+#bd .ke-post button,
+#bd .ke-post input,
+#bd .ke-post select,
+/* for ie */
+#bd .ke-post textarea {
+    font: 14px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+#bd .ke-post h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: .67em 0;
+}
+#bd .ke-post h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: .83em 0;
+}
+#bd .ke-post h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+#bd .ke-post h4 {
+    font-weight: bold;
+    margin: 1.33em 0;
+}
+#bd .ke-post h5 {
+    font-size: 0.83em;
+    font-weight: bold;
+    margin: 1.67em 0;
+}
+#bd .ke-post h6 {
+    font-size: 0.67em;
+    font-weight: bold;
+    margin: 2.33em 0;
+}
+#bd .ke-post blockquote {
+    display: block;
+    margin: 1em 40px;
+}
+#bd .ke-post address {
+    display: block;
+    font-style: italic;
+}
+#bd .ke-post i,
+#bd .ke-post cite,
+#bd .ke-post em,
+#bd .ke-post var,
+#bd .ke-post dfn {
+    font-style: italic;
+}
+#bd .ke-post u,
+#bd .ke-post ins {
+    text-decoration: underline;
+}
+#bd .ke-post s,
+#bd .ke-post strike,
+#bd .ke-post del {
+    text-decoration: line-through;
+}
+/* <hr> noshade and color attributes are handled completely
+by the nsHTMLHRElement attribute mapping code
+*/
+#bd .ke-post hr {
+    display: block;
+    height: 2px;
+    border: 1px inset;
+    margin: 0.5em auto 0.5em auto;
+    color: gray;
+}
+#bd .ke-post code,
+#bd .ke-post kbd,
+#bd .ke-post pre,
+#bd .ke-post samp {
+    font-family: courier new, courier, monospace;
+}
+#bd .ke-post small {
+    font-size: 12px;
+}
+#bd .ke-post sup {
+    vertical-align: text-top;
+}
+#bd .ke-post sub {
+    vertical-align: text-bottom;
+}
+#bd .ke-post legend {
+    color: #000;
+}
+/* for ie6 */
+#bd .ke-post fieldset,
+#bd .ke-post img {
+    border: 0;
+}
+#bd .ke-post table {
+    display: table;
+}
+/* giving blockquotes and lists room to breath */
+#bd .ke-post blockquote,
+#bd .ke-post ul,
+#bd .ke-post ol,
+#bd .ke-post dl {
+    margin: 1em;
+}
+/* bringing lists on to the page with breathing room */
+#bd .ke-post ul,
+#bd .ke-post ol,
+#bd .ke-post dl {
+    margin-left: 2em;
+}
+#bd .ke-post ol li {
+/* giving OL's LIs generated numbers */
+    list-style: decimal outside;
+}
+#bd .ke-post ul li {
+/* giving UL's LIs generated disc markers */
+    list-style: disc outside;
+}
+#bd .ke-post ul li {
+/* giving UL's LIs generated disc markers */
+    list-style: disc outside;
+}
+#bd .ke-post ul li ul li {
+    list-style: circle;
+}
+#bd .ke-post ul li ul li ul li {
+    list-style: square;
+}
+#bd .ke-post dl dd {
+/* providing spacing for definition terms */
+    margin-left: 1em;
+}
+#bd .ke-post th {
+    font-weight: bold;
+    text-align: center;
+}
+#bd .ke-post caption {
+/* coordinated margin to match cell's padding */
+    margin-bottom: .5em; /*ie6,7下会换行，强制不换行*/
+    white-space: nowrap;
+}
+#bd .ke-post fieldset,
+#bd .ke-post table,
+#bd .ke-post pre {
+/* so things don't run into each other */
+/*margin-bottom: 1em;*/
+}
+#bd .ke-post ul,
+#bd .ke-post ol {
+    margin-left: 0;
+    padding-left: 40px;
+}
+#bd .ke-post p {
+    margin: 1.12em 0;
+}
+#bd .ke-post td img,
+#bd .ke-post p img {
+    vertical-align: top;
+}
+/*firefox 破碎图片手动定义才出现*/
+#bd .ke-post img: -moz-broken {
+    -moz-force-broken-image-icon: 1;
+    height: 24px;
+    width: 24px;
+}
+/* .ke-post END -------------------------------------------------- }}} */
+
+
+/* #reviews：评价详情 -------------------------------------------------- {{{ */
+#reviews {
+    color:#404040;
+    clear:both;
+}
+#reviews i,
+#reviews b,
+#reviews .tb-r-att-close,
+.tb-r-pv-close,
+#reviews .tb-r-sort .tb-current {
+    background:url(http://img01.taobaocdn.com/tps/i1/T1eiTXXnNgXXaS8Xf4-200-107.png) 100px 100px no-repeat;
+    display:inline-block;
+}
+#reviews img {
+    display:inline;
+}
+
+#reviews .tb-r-attention {
+    padding:5px 10px;
+    margin-top:10px;
+    border:1px solid #ffcc7f;
+    background:#ffffe6;
+    color:#999;
+    position:relative;
+    zoom:1;
+}
+#reviews .tb-r-att-close {
+    position:absolute;
+    right:9px;
+    font-size:0;
+    line-height:0;
+    width:13px;
+    height:13px;
+    cursor:pointer;
+    top:6px;
+    background-color:#ffcc7f;
+    background-position:-40px -86px;
+    color:#fff;
+    outline:none;
+}
+#reviews .tb-r-att-close:hover {
+    background-color:#ffb649;
+    text-decoration:none;
+}
+#reviews .tb-icon-gift {
+    background-position:-160px -90px;
+    width:16px;
+    height:15px;
+    float:left;
+    margin-right:5px;
+    *margin-right:2px;
+}
+
+/*** tb-r-summary {{{ **/
+    #reviews .tb-r-summary {
+      border: 1px solid #d7d7d7;
+      padding:20px 30px 10px;
+      background-color: #f9f9f9;
+      margin-bottom:10px;
+      zoom:1;
+    }
+
+    #reviews .tb-r-score,
+    #reviews .tb-r-count-num {
+      float: left;
+    }
+    #reviews .tb-r-score {
+      font-size: 14px;
+      color:#404040;
+    }
+    #reviews .tb-r-score strong {
+      font:normal 16px Tahoma,Arial,Helvetica,sans-serif;
+      color: #f60;
+      vertical-align:text-bottom;
+    }
+
+    #reviews .tb-r-count-num {
+        color:#aaa;
+        margin:3px 0 0 10px;
+    }
+
+    #reviews .tb-r-links {
+      float: right;
+      margin-top:3px;
+    }
+    #reviews .tb-r-links a {
+      color:#404040;
+    }
+    #reviews .tb-r-links a:hover {
+        color:#808080;
+    }
+
+    #reviews .r-shoprate i {
+        width:16px;
+        height:16px;
+        background-position:-181px -66px;
+        margin-right:5px;
+        vertical-align:text-top;
+    }
+
+
+/*** tb-r-summary }}} **/
+
+    #reviews .tb-r-spu-rateing li {
+        float:left;
+        width:260px;
+        margin-bottom:5px;
+    }
+    #reviews .tb-r-spu-rateing span {
+        display:inline-block;
+        height:18px;
+        width:73px;
+        border:1px solid #d4d4d4;
+        background:#fff;
+        text-align:center;
+        line-height:18px;
+    }
+    #reviews .tb-r-spu-rateing em {
+        color:#f60;
+        font-weight:bold;
+    }
+/*** tb-r-filter {{{ **/
+    #reviews .tb-r-filter {
+        position: relative;
+        padding:10px 0;
+        z-index:10;
+        border-top:2px #e9e9e9 solid;
+        background:#FCFCFC;
+        color:#404040;
+        margin-top:-1px;
+    }
+    #reviews .tb-r-filter input,
+    #reviews .tb-r-filter label {
+        vertical-align:text-bottom;
+        margin-right:6px;
+    }
+
+    #reviews .tb-taglist {
+        padding-left:10px;
+    }
+    #reviews .tb-taglist li {
+        float:left;
+        margin-right:10px;
+        /*width:70px;*/
+    }
+    #reviews .tb-taglist li span {
+        vertical-align:middle;
+    }
+    #reviews .tb-taglist li.tb-long {
+        min-width:90px;
+    }
+    #reviews .tb-taglist .tb-r-count {
+        color:#BBB;
+        margin-left:3px;
+    }
+    #reviews .tb-taglist span {
+        vertical-align:middle;
+    }
+    #reviews .tb-taglist .r-c-title {
+        font-size:14px;
+    }
+    #reviews .tb-taglist .tb-current .r-c-title {
+        font-weight:bold;
+    }
+    /**review dropdown**/
+
+    #reviews .tb-r-filter .tb-r-acts {
+        position:absolute;
+        right:10px;
+        top:13px;
+    }
+
+    #reviews .tb-r-acts li {
+        float:left;
+        margin-left:5px;
+    }
+
+    #reviews .tb-r-sort ul,
+    #reviews .tb-r-sort li {
+      margin: 0;
+      list-style: none;
+    }
+    #reviews .tb-r-sort .tb-current {
+      background-position:0 -41px;
+      display:block;
+      cursor: default;
+      height:20px;
+      line-height:20px;
+      width:81px;
+      padding-left:10px;
+    }
+    #reviews .tb-r-sort li {
+        float:none;
+        border-top: 1px solid #DDD;
+    }
+    #reviews .tb-r-sort li.tb-first {
+      border-top: none;
+    }
+    #reviews .tb-r-sort a {
+      color:#404040;
+      display:block;
+      text-decoration:none;
+      height:24px;
+      line-height:24px;
+      background: #fff;
+      cursor: pointer;
+      padding:0 5px;
+    }
+    #reviews .tb-r-sort a:hover {
+      text-decoration:none;
+      color:#808080;
+    }
+    #reviews .tb-hover .tb-current {
+      background-position:0 -62px;
+    }
+    #reviews .tb-r-sort ul {
+        display:none;
+        position:absolute;
+        background:#fff;
+        width:85px;
+        padding:0 2px;
+        border-width:0 1px 1px;
+        border-style:solid;
+        border-color:#DDD;
+        overflow:hidden;
+    }
+    #reviews .tb-hover ul {
+        display:block;
+    }
+    #reviews .tb-r-sort li {
+        margin-top:-1px;
+    }
+    #reviews .tb-r-sort i {
+        display:inline-block;
+        width:25px;
+        height:16px;
+        vertical-align:middle;
+        _margin-top:3px;
+    }
+    #reviews .tb-r-sort .tb-r-time i { background-position:-178px 0px; }
+    #reviews .tb-r-sort .tb-r-default i { background-position:-178px -84px; }
+    #reviews .tb-r-sort .tb-r-heat i { background-position:-178px -16px; }
+    #reviews .tb-r-sort .tb-r-rank i { background-position:-178px -34px; }
+    #reviews .tb-r-sort .tb-r-hot { background-position:-178px -50px; position:absolute;
+        right:0;
+        width:21px;
+        top:-10px;
+    }
+/*** tb-r-filter }}} **/
+#reviews .tb-revbd {
+    min-height:120px;
+    _height:120px;
+    border-top: 1px solid #ededed;
+}
+
+.tb-r-comments {
+    border-top:#f6f6f6 3px solid;
+}
+
+/*** 评论下消保链接 {{{***/
+    #reviews .tb-r-tip {
+        border-top:#FFCC7F 1px solid;
+        border-bottom:#FFCC7F 1px solid;
+        margin:10px 0;
+        padding:2px 10px;
+        background:#ffffe3;
+    }
+
+    .tb-review-tip {
+        position:absolute;
+        left:-9999px;
+        top:-999px;
+        border:1px solid #888888;
+        background:#dfdfdf;
+        padding:3px;
+        width:159px;
+        *width:165px;
+    }
+    .tb-review-tip-cnt {
+        padding:0 8px;
+        background:#fff;
+    }
+
+    .tb-review-arrow,
+    .tb-review-arrow-inner {
+        font-size:0;
+        line-height:0;
+        position:absolute;
+        right:0;
+        right:-13px;
+        top:8px;
+        border:transparent dashed 7px;
+        border-left:#dfdfdf solid 7px;
+    }
+
+    .tb-review-arrow {
+        right:-14px;
+        border-left:#888 solid 7px;
+    }
+/*** 评论下消保链接}}} ***/
+
+#reviews .tb-no-result {
+    padding:20px;
+    height:80px;
+    border-bottom: 1px solid #ededed;
+    border-left: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    _height:100px;
+}
+
+/*** tb-loading {{{ */
+    #reviews .tb-loading_stat {
+        padding-top:36px;
+        text-align:center;
+        z-index:9;
+        width:100%;
+    }
+    #reviews .tb-loading_stat img {
+        vertical-align:middle;
+        margin-right:10px;
+    }
+
+    #reviews .tb-r-comment {
+        position:relative;
+        list-style: none;
+        outline:none;
+        border-bottom:1px solid #D4D4D4;
+    }
+
+    #reviews .tb-r-box {
+        background:#f9f9f9;
+        border:#ddd 1px solid;
+    }
+
+    #reviews .tb-r-ubox{
+        border-bottom:1px dotted #c3c3c3;
+        padding:10px 0;
+        position:relative;
+    }
+    #reviews .tb-r-ubox-bd {
+        overflow:hidden;
+        zoom:1;
+    }
+    #reviews .tb-r-ubox h3 {
+        width:90px;
+        color:#000;
+        text-align:right;
+        font-weight:normal;
+        margin:3px 10px 0 0;
+        float:left;
+    }
+
+    /**
+     * 大家印象
+     **/
+
+    #reviews .tb-r-impress li {
+        margin:0 5px 5px 0;
+        position:relative;
+        white-space:nowrap;
+        float:left;
+    }
+
+    #reviews .tb-r-impress a {
+        float:left;
+        height:25px;
+        padding:0 3px;
+        line-height:25px;
+    }
+
+    #reviews .tb-r-pos a {
+        background:#F3904D;
+        border:2px solid #F3904D;
+        color:#FFF;
+    }
+    #reviews .tb-r-pos a:hover,
+    #reviews .tb-r-pos.tb-current a {
+        background:#FFF;
+        border:2px solid #FF6E0D;
+        color:#404040;
+        text-decoration:none;
+    }
+    #reviews .tb-r-pos.tb-current a {
+    }
+    #reviews .tb-r-neg a {
+        border:2px solid #b4b4b4;
+        background:#b4b4b4;
+        color:#fff;
+    }
+    #reviews .tb-r-neg a:hover,
+    #reviews .tb-r-neg.tb-current a {
+        background:#fff;
+        border:2px solid #ff6e0d;
+        color:#404040;
+        text-decoration:none;
+    }
+    #reviews .tb-current .tb-r-checkup {
+        display:block;
+    }
+    #reviews .tb-r-checkup {
+        display:none;
+        background-position:0 0;
+        width:10px;
+        height:10px;
+        position:absolute;
+        right:0;
+        bottom:0;
+        _bottom:-4px;
+    }
+/*** tb-loading }}} */
+/*** tb-r-buyer {{{ */
+    .tb-r-buyer {
+      padding-top:10px;
+      margin-right:10px;
+      *margin-right:5px;
+      float:left;
+      width: 100px;
+    }
+    .tb-r-buyer .tb-r-avatar img {
+        display:inline;
+        margin-left:29px;
+    }
+    .tb-r-buyer .tb-r-nick,
+    .tb-r-buyer .tb-r-rank {
+        text-align:center;
+        overflow:hidden;
+        height:18px;
+    }
+
+/*** tb-r-buyer }}} */
+
+/*** tb-r-commentbd {{{ */
+    .tb-r-spu-ratting {
+        background:#fffbf4;
+        padding:5px 10px;
+    }
+    .tb-r-spu-ratting li {
+        float:left;
+        width:250px;
+        color:#aaa;
+    }
+    #reviews .tb-r-bd {
+      zoom:1;
+      overflow:hidden;
+      position:relative;
+      padding:10px 10px 40px 0;
+      min-height:60px;
+    }
+    /*高亮*/
+    #reviews .tb-r-bd em {
+        background:#ff0;
+    }
+    #reviews .tb-r-cnt,
+    #reviews .tb-r-reply {
+        word-wrap: break-word;
+        font-size:14px;
+        padding-left:10px;
+    }
+    #reviews .tb-r-cnt{
+        max-width:580px;
+        color:#404040;
+        margin-top:8px;
+    }
+    #reviews .tb-r-reply {
+        width:570px;
+        margin-top:8px;
+        color: #bd7f00;
+    }
+
+    #reviews .tb-r-append {
+        position:relative;
+        background:#fff;
+        padding:0 0 8px;
+        border: 1px #efefef solid;
+        background:#fafafa;
+        margin:15px 0 0 10px;
+    }
+
+    .tb-r-photos {
+        margin:10px 0;
+    }
+    .tb-r-photos li {
+        float:left;
+        border:1px solid #ccc;
+        margin-right:5px;
+        position:relative;
+        transition:border-color .3s ease-out;
+        -webkit-transition:border-color .3s ease-out;
+        -o-transition:border-color .3s ease-out;
+        -moz-transition:border-color .3s ease-out;
+    }
+
+    .tb-r-photos .tb-current {
+        border:2px solid #f60;
+        border-radius:2px;
+        margin-right:3px;
+        -webkit-border-radius:2px;
+        -moz-border-radius:2px;
+        -o-border-radius:2px;
+    }
+    .tb-photos-arrow {
+        width:0;
+        height:0;
+        line-height:0;
+        font-size:0;
+        border:transparent 5px dashed;
+        border-top:5px solid #f60;
+        position:absolute;
+        left:15px;
+        filter:alpha(opacity=0);
+        opacity:0;
+        bottom:-8px;
+        transition:all .3s ease-out;
+        -webkit-transition:all .3s ease-out;
+        -o-transition:all .3s ease-out;
+        -moz-transition:all .3s ease-out;
+    }
+    .tb-current .tb-photos-arrow {
+        filter:alpha(opacity=100);
+        opacity:1;
+        bottom:-12px;
+    }
+    #reviews .tb-r-photos img {
+        display:block;
+        width:40px;
+        height:40px;
+        cursor:pointer;
+    }
+    .tb-r-pv-close {
+        position:absolute;
+        font-size:0;
+        line-height:0;
+        width:15px;
+        height:15px;
+        cursor:pointer;
+        background-color:#000;
+        border:1px solid #ddd;
+        background-position:-39px -85px;
+        color:#fff;
+        outline:none;
+        top:-1px;
+        right:-1px;
+    }
+    .tb-r-pv-close:hover {
+        background-color:#333;
+    }
+
+    .tb-r-photo-viewer {
+        position:relative;
+        margin:10px 0;
+        border:1px solid #cecece;
+        width:400px;
+    }
+    .tb-r-photo-loading {
+        margin:10px 0;
+        text-align:center;
+        background:#f4f4f4;
+        border:1px solid #cecece;
+        padding:20px 0;
+        width:400px;
+    }
+    .tb-r-pv-bd {
+        height:400px;
+        width:400px;
+        display:table-cell;
+        *display: block;
+        *font-size:349px;
+        *font-family:Arial;
+        vertical-align:middle;
+        overflow:hidden;
+        background:#f6f6f6;
+        text-align:center;
+    }
+    .tb-r-pv-bd img {
+        border:0;
+        vertical-align:middle;
+    }
+    .tb-r-arrow-up {
+        font-size:0;
+        line-height:0;
+        position:absolute;
+        border:transparent dashed 7px;
+        border-bottom:#f5f5f5 solid 7px;
+        top:-14px;
+        left:36px;
+    }
+    .tb-r-arrow-up-top {
+        border:transparent dashed 7px;
+        border-bottom:#fafafa solid 7px;
+        top:-13px;
+        left:36px;
+    }
+    #reviews .tb-r-append .reply {
+        margin-top:10px;
+    }
+    #reviews .tb-r-info {
+        font-size:12px;
+        margin-top:6px;
+        padding-left:10px;
+        color:#b0b0b0;
+    }
+    #reviews .tb-r-date {
+        margin-right:8px;
+    }
+
+/** 操作条 {{{ **/
+    #reviews .tb-r-act {
+        position:absolute;
+        bottom:12px;
+        right:10px;
+    }
+    #reviews .tb-r-marks {
+        float:left;
+        color:#8e3c04;
+        border:1px solid #fbb688;
+        background:#fde7d9;
+        cursor:default;
+    }
+
+    #reviews .tb-r-marks span {
+        float:left;
+        height:20px;
+        margin-right:5px;
+        width:auto;
+    }
+
+    #reviews .tb-r-marks .tb-icon-gift {
+        margin:3px 2px 0;
+    }
+
+    #reviews .tb-useful-btn {
+        color:#333;
+        border:1px solid #ccc;
+        display:inline-block;
+        padding:0 5px;
+        background: #ffffff; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2YxZjFmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2UxZTFlMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNmY2ZjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* IE10+ */
+        background: linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-8 */
+    }
+    #reviews .tb-useful-btn:hover {
+        color:#404040;
+        text-decoration:none;
+    }
+    .tb-r-useful {
+        float:left;
+        margin-left:5px;
+    }
+
+    .tb-useful-btn,
+    .tb-r-marks,
+    .tb-r-useful .tb-r-msg {
+        float:left;
+        height:20px;
+        line-height:20px;
+    }
+    .tb-r-useful .tb-r-msg {
+        display:none;
+        padding:0 2px;
+        border:1px solid #ccc;
+        background:#f4f4f4;
+        color:#f60;
+    }
+    .tb-r-useful .tb-r-ucount {
+        color:#f60;
+    }
+
+/** 操作条 }}} **/
+
+    #reviews .tb-isloading .tb-r-normal ,
+    #reviews .tb-r-msg {
+      display: none;
+    }
+
+    #reviews .tb-isloading .tb-r-msg {
+        display:block;
+        padding-left:20px;
+        background:#f4f4f4 url(http://img02.taobaocdn.com/tps/i2/T1TSzXXotXXXbrlo..-14-14.gif) 3px 3px no-repeat;
+    }
+
+/*** tb-r-commentbd }}} */
+
+/*** tb-r-clear {{{ */
+#reviews .tb-r-summary:after,
+.tb-r-photos:after,
+.tb-r-spu-ratting:after,
+#reviews .tb-r-comment:after,
+.tb-r-act:after,
+#reviews .tb-r-ubox:after,
+.tb-taglist:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+
+}
+
+.tb-wrap,
+.tb-r-act,
+.tb-r-photos,
+.tb-r-spu-ratting,
+#reviews .tb-r-comment,
+#reviews .tb-r-ubox,
+.tb-taglist{
+    zoom:1;
+}
+/*** tb-r-clear }}} */
+
+/* #reviews END -------------------------------------------------- }}} */
+
+
+/* #deal-record：成交记录 -------------------------------------------------- {{{ */
+#deal-record div {
+    width: 100%;
+    overflow: hidden;
+}
+#deal-record .pm-info {
+    padding:20px;
+    border:1px solid #d7d7d7;
+    background:#f9f9f9;
+    clear:both;
+    width:708px;
+    margin-bottom:20px;
+}
+.expanded #deal-record .pm-info {
+    width:908px;
+}
+#deal-record .small-buy,
+#deal-record .small-bid,
+#deal-record .small-wait {
+    display: none;
+}
+#deal-record .lst-summary-inrecord em,
+#deal-record .table-deal-record em,
+#deal-record .table-deal-record caption {
+    font-weight: 700;
+    color: #f50;
+}
+#deal-record .lst-summary-inrecord {
+    width: 100%;
+    height: 33px;
+    margin: 10px 0 0 0px;
+    overflow: hidden;
+    line-height: 33px;
+}
+#deal-record .lst-summary-inrecord li {
+    display: inline;
+    float: left;
+    margin: 0 15px 0 0;
+}
+#deal-record .table-deal-record {
+    width: 100%;
+    margin-bottom: 10px;
+}
+#deal-record .table-deal-record caption {
+    padding: 5px 0;
+}
+#deal-record .table-deal-record th {
+    height: 30px;
+    text-align: center;
+    font-weight: 700;
+    background-color: #f6f9fc;
+    border-bottom: 2px solid #dde4ea;
+}
+#deal-record .table-deal-record td {
+    padding: 3px 5px;
+    text-align: center;
+    border-bottom: 1px solid #eef1f4;
+}
+#deal-record .cell-align-l {
+    text-align: left;
+}
+#deal-record .cell-align-c {
+    text-align: center;
+}
+#deal-record .odd {
+    background-color: #f6f9ff;
+}
+#deal-record .col-buyer {
+    width: 130px;
+}
+#deal-record .col-price {
+    width: 10%;
+}
+#deal-record .col-amount {
+    width: 10%;
+}
+#deal-record .col-chargetime {
+    width: 20%;
+}
+#deal-record .col-status {
+    width: 10%;
+}
+#deal-record .col-auct-buyer {
+    width: 20%;
+}
+#deal-record .col-auct-price {
+    width: 20%;
+}
+#deal-record .col-auct-amount {
+    width: 15%;
+}
+#deal-record .col-auct-effectamount {
+    width: 15%;
+}
+#deal-record .col-auct-actiontime {
+    width: 20%;
+}
+#deal-record .col-auct-status {
+    width: 10%;
+}
+#deal-record .view-all {
+    text-align: right;
+}
+#deal-record .view-all a,
+#deal-record .view-all a: visited {
+    font-size: 14px;
+    color: #DA692F;
+}
+#deal-record .view-all ins {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    overflow: hidden;
+    border: 4px solid #F6F6F6;
+    border-right: none;
+    border-left-color: #DA692F;
+}
+#deal-record .pagination {
+    float: none;
+}
+#deal-record .pagination a {
+    text-decoration: none;
+    color: #03c;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+#deal-record .pagination a:hover {
+    color: #fff;
+    background-color: #09f;
+}
+#deal-record .page-info,
+#deal-record .page-prev,
+#deal-record .page-cur,
+#deal-record .page-start,
+#deal-record .page-end,
+#deal-record .page-break,
+#deal-record .pagination a {
+    display: inline-block;
+    float: none;
+    height: 18px;
+    margin: 0 3px 0 0;
+    padding: 0 5px;
+    overflow: hidden;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: top;
+    white-space: nowrap;
+}
+#deal-record .page-cur,
+#deal-record .page-cur:hover {
+    font-weight: bold;
+    cursor: default;
+    color: #f60;
+    background-color: #fff;
+    border-color: #fff;
+}
+/* #deal-record END -------------------------------------------------- }}} */
+
+
+
+/* #deal-record 新版 -------------------------------------------------- {{{ */
+/* css sprites */
+#deal-record .tb-view i,
+.tb-record-popup i {
+    background: url(http://img04.taobaocdn.com/tps/i4/T1cP85XihuXXXXXXXX-13-101.png) no-repeat;
+}
+#deal-record .tb-public-price em {
+    font-weight: bold;
+    color: #f50;
+}
+#deal-record .tb-public-price span {
+    margin-left: 15px;
+    color: #808080;
+}
+#deal-record .tb-list {
+    table-layout: fixed;
+    width: 100%;
+    color: #404040;
+}
+#deal-record .tb-list caption {
+    display: none;
+}
+#deal-record .tb-col-buyer {
+    width: 24%;
+}
+#deal-record .tb-col-price {
+    width: 14%;
+}
+#deal-record .tb-col-amount {
+    width: 10%;
+}
+#deal-record .tb-col-time {
+    width: 24%;
+}
+#deal-record .tb-sku {
+    width: 28%;
+}
+#deal-record .tb-list th {
+    padding-bottom: 5px;
+    text-align: left;
+    border-bottom: 2px solid #f0f0f0;
+}
+#deal-record .tb-list td {
+    padding: 10px 5px 10px 0;
+    border-bottom: 1px dashed #f2f0f0;
+}
+#deal-record .tb-list .tb-buyer {
+    padding-left: 15px;
+}
+#deal-record .tb-list .tb-anonytip {
+    margin-left: 3px;
+    font-weight: normal;
+}
+#deal-record .tb-list .tb-anonytip,
+#deal-record .tb-list .tb-anonymous {
+    color: #999;
+}
+#deal-record .tb-sellnick {
+    display: block;
+    margin-bottom: 3px;
+}
+#deal-record .tb-buyer img {
+    margin-right: 5px;
+}
+#deal-record td.tb-price {
+    font-weight: bold;
+    color: #f50;
+}
+#deal-record td.tb-price .tb-promo{
+    display:inline-block;
+    *zoom:1;
+    background: url(http://img02.taobaocdn.com/tps/i2/T1OASeXe4zXXXXXXXX-18-16.png) no-repeat;
+    width: 18px;
+    height: 16px;
+    vertical-align: middle;
+}
+#deal-record .tb-sku-wrap {
+    position: relative;
+    overflow: hidden;
+}
+#deal-record .tb-sku-none {
+    height: 20px;
+}
+#deal-record .tb-sku-wrap p {
+    display: inline-block;
+    margin-right: 10px;
+    margin-right: 13px\9;
+    overflow: hidden;
+    *display: inline;
+    *zoom: 1;
+    word-wrap: break-word;
+}
+/* .tb-change-record */
+#deal-record .tb-change td {
+    background: #fffcf3;
+}
+#deal-record .tb-change-info td {
+    padding-left: 15px;
+    background: #fff3d9;
+    border: none;
+    border-top: 1px solid #fbd3ab;
+}
+#deal-record .tb-view {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 100%;
+    _height: 200px;
+    background: #fffcf3;
+}
+#deal-record .tb-view i {
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: -9999px;
+    cursor: pointer;
+    background-position: 0 -77px;
+}
+#deal-record tr:hover .tb-view,
+#deal-record tr.tb-hover .tb-view {
+    display: block;
+}
+/* 成交时标题浮出层 */
+.tb-record-popup {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 100;
+    width: 200px;
+    border: 1px solid #bfbfbf;
+}
+.tb-record-popup .tb-wrap {
+    padding: 5px;
+    background: #fff;
+    border: 2px solid #f6f6f6;
+}
+.tb-record-popup h3 {
+    font-weight: normal;
+}
+.tb-record-popup p {
+    width: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
+    color: #808080;
+}
+.tb-record-popup i {
+    position: absolute;
+    right: 20px;
+    bottom: -8px;
+    width: 12px;
+    height: 8px;
+    overflow: hidden;
+    background-position: 0 -94px;
+}
+#deal-record .tb-view-all {
+    margin-top: 15px;
+    text-align: right;
+}
+/* 验证码 */
+#deal-record .tb-code {
+    display: none;
+    margin-top: 20px;
+    text-align: right;
+}
+#deal-record .tb-code-pic,
+#deal-record .tb-code-input,
+#deal-record .tb-code-btn {
+    vertical-align: middle;
+}
+#deal-record .tb-code-pic,
+#deal-record .tb-code-pic span {
+    display: inline-block;
+    width: 56px;
+    height: 20px;
+}
+#deal-record .tb-code-pic {
+    overflow: hidden;
+    border: 1px solid #aeaeaf;
+}
+#deal-record .tb-code-pic span {
+    line-height: 20px;
+    text-align: center;
+    color: #f50;
+}
+#deal-record .tb-code-pic:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+#deal-record .tb-code-pic:hover img {
+    display: none;
+}
+#deal-record .tb-code-split {
+    margin: 0 5px;
+}
+#deal-record .tb-code-input {
+    width: 50px;
+    height: 14px;
+    padding: 3px;
+    line-height: 14px;
+    border: 1px solid #aeaeaf;
+}
+#deal-record .tb-code-btn {
+    width: 44px;
+    height: 22px;
+    margin: 0 10px 0 15px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background: -moz-linear-gradient(center top, #fff, #ededed);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), to(#ededed));
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr = #ffffffff, endcolorstr = #ffededed, gradientType = 0);
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border: 1px solid #bfbfbf;
+}
+#deal-record .tb-show-code .tb-pagination,
+#deal-record .tb-show-code .tb-view-all {
+    display: none;
+}
+#deal-record .tb-show-code .tb-code {
+    display: block;
+}
+/* #deal-record 新版 END -------------------------------------------------- }}} */
+
+
+
+/* 翻页：评价详情与成交记录了共用 -------------------------------------------------- {{{ */
+#bd .tb-page-bottom .page-start,
+#bd .tb-page-bottom .page-prev,
+#bd .tb-page-bottom .page-next,
+#bd .tb-page-bottom .page-end {
+    background: url(http://img04.taobaocdn.com/tps/i4/T1cP85XihuXXXXXXXX-13-101.png) no-repeat;
+}
+#reviews .tb-pagination,
+#deal-record .tb-pagination {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+#bd .tb-page-bottom {
+    display: inline;
+    float: right;
+    width: auto;
+}
+#bd .tb-page-bottom a,
+#bd .tb-page-bottom .page-info,
+#bd .tb-page-bottom .page-start,
+#bd .tb-page-bottom .page-prev,
+#bd .tb-page-bottom .page-cur,
+#bd .tb-page-bottom .page-end,
+#bd .tb-page-bottom .page-break {
+    display: inline;
+    float: left;
+    height: 24px;
+    margin-right: 3px;
+    padding: 0 5px;
+    line-height: 24px;
+    text-align: center;
+    font-family: Tahoma,SimSun,Arial;
+}
+#bd .tb-page-bottom a,
+#bd .tb-page-bottom .page-start,
+#bd .tb-page-bottom .page-prev,
+#bd .tb-page-bottom .page-cur,
+#bd .tb-page-bottom .page-end,
+#bd .tb-page-bottom .page-break {
+    min-width: 16px;
+    _width: 16px;
+    border: 1px solid #ccc;
+}
+#bd .tb-page-bottom a:hover {
+    text-decoration: none;
+    border: 1px solid #FD6D01;
+}
+#bd .tb-page-bottom .page-start,
+#bd .tb-page-bottom .page-prev,
+#bd .tb-page-bottom .page-next,
+#bd .tb-page-bottom .page-end {
+    width: 36px;
+}
+#bd .tb-page-bottom .page-start {
+    padding-left: 16px;
+    background-position: 5px 8px;
+}
+#bd .tb-page-bottom .page-prev {
+    padding-left: 16px;
+    background-position: 0 -12px;
+}
+#bd .tb-page-bottom .page-next {
+    padding-right: 16px;
+    background-position: 42px -50px;
+}
+#bd .tb-page-bottom .page-end {
+    padding-right: 16px;
+    background-position: 47px -31px;
+}
+#bd .tb-page-bottom .page-cur {
+    font-weight: bold;
+    color: #fd6d01;
+    background-color: #ffede1;
+    border: 1px solid #fd6d01;
+}
+#bd .tb-page-bottom .page-info,
+#bd .tb-page-bottom .page-break {
+    color: #c0c0c0;
+    border: none;
+}
+#bd .tb-page-bottom .page-more {
+    margin-left: 5px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* 翻页 END -------------------------------------------------- }}} */
+
+
+
+/* #other-info：保障须知 -------------------------------------------------- {{{ */
+#other-info .left-top-bg,
+#other-info .top-bg,
+#other-info .bottom-bg {
+    background: url(http://img04.taobaocdn.com/tps/i4/T1CK0ZXbBnXXXXXXXX-88-152.png) no-repeat;
+}
+#other-info .left-bg,
+#other-info .right-bg {
+    background: url(http://img04.taobaocdn.com/tps/i3/T1xu0ZXcXnXXXXXXXX-88-50.png) no-repeat;
+}
+#other-info {
+    line-height: 25px;
+}
+#other-info .guarantee {
+    position: relative;
+    color: #404040;
+}
+#other-info .guarantee h2 {
+    margin: 25px 0 10px 0;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #F2DEB6;
+}
+#other-info .guarantee h5 {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
+#other-info .guarantee ol {
+    margin-left: 16px;
+    list-style-type: decimal;
+}
+#other-info .guarantee p {
+    line-height: 28px;
+}
+#other-info .guarantee p a: link {
+    color: #0063DD;
+}
+#other-info .guarantee p a:hover {
+    color: #f60;
+}
+#other-info .guarantee table {
+    margin: 5px 0;
+    border: 1px solid #F3E0BA;
+    border-right: none;
+}
+#other-info .guarantee td {
+    border-right: 1px solid #F3E0BA;
+}
+#other-info .guarantee thead tr {
+    background-color: #FFF9E3;
+}
+#other-info .guarantee thead td {
+    padding: 5px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+#other-info .guarantee tbody td {
+    padding: 10px;
+    line-height: 18px;
+    vertical-align: top;
+}
+#other-info .left-top-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 88px;
+    height: 95px;
+}
+#other-info .top-bg {
+    height: 23px;
+    background-repeat: repeat-x;
+    background-position: 0 -100px;
+}
+#other-info .bottom-bg {
+    height: 22px;
+    background-repeat: repeat-x;
+    background-position: 0 -127px;
+}
+#other-info .left-bg {
+    height: 100%;
+    background-repeat: repeat-y;
+    background-position: -60px 0;
+}
+#other-info .right-bg {
+    height: 100%;
+    padding: 0 25px;
+    background-repeat: repeat-y;
+    background-position: 730px 0;
+}
+.expanded #other-info .right-bg {
+    background-position: 930px 0;
+}
+#other-info .txt-center {
+    text-align: center;
+}
+#other-info .remark {
+    color: #808080;
+}
+#other-info .indentation {
+    padding-left: 16px;
+}
+#other-info .mat-t10 {
+    margin-top: 10px;
+}
+#other-info .customer-guarantee {
+    position: absolute;
+    top: 34px;
+    right: 22px;
+}
+#other-info .bottom-img {
+    margin-top: 50px;
+    overflow: hidden;
+}
+/* 食品安全 */
+#other-info .food-safety h5 {
+    margin: 0 0 15px 0;
+}
+#other-info .food-safety .caution {
+    margin-top: 20px;
+    padding-left: 16px;
+    line-height: 1.8;
+}
+/* #other-info END -------------------------------------------------- }}} */
+
+
+
+/* #other-info：售后服务 -------------------------------------------------- {{{ */
+#other-info .content {
+    width: 100%;
+    overflow: hidden;
+}
+#other-info .item-afterSales {
+    margin-bottom: 25px;
+}
+#other-info .item-afterSales ul {
+    font-size: 12px;
+}
+#other-info .item-afterSales li {
+    clear: both;
+    display: block;
+    width: 718px;
+    margin: 5px 0;
+    padding: 3px 5px 3px 25px;
+}
+#other-info .item-afterSales li img {
+    float: left;
+}
+#other-info .item-afterSales li p {
+    display: block;
+    padding: 0 0 2px 32px;
+    border-bottom: 1px solid #DFDFDF;
+}
+#other-info .item-afterSales .highlight-service,
+#other-info .item-afterSales .customMsg p {
+    background-image: url(http://img02.taobaocdn.com/tps/i2/T1UqVKXj4nXXXXXXXX-8-86.gif);
+}
+#other-info .item-afterSales .highlight-service {
+    background-color: #E9FFE4;
+    background-repeat: repeat-x;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+#other-info .item-afterSales .highlight-service p {
+    border-bottom: 0;
+}
+#other-info .item-afterSales .customMsg p {
+    line-height: 2;
+    background-repeat: no-repeat;
+    background-position: 6px -70px;
+}
+#other-info .item-afterSales .serName {
+    display: inline;
+    float: left;
+    width: 50px;
+    text-align: right;
+}
+#other-info .item-afterSales .tipMsg {
+    display: block;
+    margin-left: 34px;
+    text-indent: 2em;
+}
+#other-info .item-afterSales .tipMsg strong {
+    color: #f50;
+}
+#other-info .item-afterSales .tipMsg a {
+    font-weight: bold;
+}
+#other-info .item-express-charge {
+    clear: left;
+}
+#other-info .highlight-extra-weight,
+#other-info .item-float-average span {
+    font-weight: bold;
+}
+#other-info .item-float-average {
+    display: inline;
+    float: left;
+    width: 49%;
+    height: 25px;
+}
+/* #other-info END -------------------------------------------------- }}} */
+
+
+
+/* #other-info：运费模板 -------------------------------------------------- {{{ */
+#other-info .postage-table-cont {
+    position: relative;
+    top: -15px;
+    left: 65px;
+    width: 520px;
+}
+#other-info .item-express-charge table {
+    width: 520px;
+    background-color: #e8e8e8;
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+#other-info .col-express-trans {
+    width: 18%;
+}
+#other-info .col-express-agency {
+    width: 15%;
+}
+#other-info .item-express-charge th {
+    text-align: center;
+    background-color: #f5f5f5;
+}
+#other-info .item-express-charge td {
+    text-align: center;
+    background-color: #fff;
+}
+#other-info .postage-table-cont ins {
+    position: absolute;
+    top: 1px;
+    left: 406px;
+}
+#other-info .tb-postage-toggle {
+    text-decoration: underline;
+    color: #36c;
+}
+/* #other-info END -------------------------------------------------- }}} */
+
+
+
+/* #payway-info：付款方式 -------------------------------------------------- {{{ */
+#payway-info .section-box h5,
+#payway-info .trade-flow {
+    background: url(http://img01.taobaocdn.com/tps/i1/T1QKJnXe4iXXXXXXXX-600-120.png) no-repeat;
+}
+#payway-info .content {
+    width: auto;
+}
+#payway-info .section-box {
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #d6d6d6;
+}
+#payway-info .section-box h5 {
+    height: 30px;
+    margin: 10px 0px;
+    padding-left: 100px;
+    line-height: 30px;
+    font-size: 14px;
+    background-position: 0 -80px;
+}
+#payway-info .section-box p {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E6E6E6;
+}
+#payway-info .trade-flow {
+    margin: 10px 0;
+    height: 80px;
+    overflow: hidden;
+}
+#payway-info .trade-flow li {
+    visibility: hidden;
+}
+#payway-info .payment-list {
+    margin-top: 10px;
+    overflow: hidden;
+    _zoom: 1;
+}
+#payway-info .payment-list li {
+    display: inline;
+    float: left;
+    width: 50%;
+    padding: 0;
+    margin-right: -1px;
+}
+#payway-info .payment-list .online {
+    border-right: 1px dashed #C5C7C8;
+}
+#payway-info .payment-list table {
+    table-layout: fixed;
+    width: 90%;
+    margin: 0 auto;
+}
+#payway-info .payment-list tbody td {
+    padding: 15px 0;
+    line-height: 18px;
+    vertical-align: top;
+    border-top: 1px solid #E6E6E6;
+}
+#payway-info .payment-list caption {
+    font-weight: bold;
+    font-size: 14px;
+    color: #f60;
+}
+#payway-info .col-payment {
+    width: 75px;
+}
+#payway-info .col-fee {
+    width: 50px;
+}
+#payway-info .col-link {
+    width: 25px;
+}
+#payway-info .col-center {
+    text-align: center;
+}
+/* #payway-info END -------------------------------------------------- }}} */
+
+
+
+/* #payway-info：新版付款方式 -------------------------------------------------- {{{ */
+/* css sprites */
+#payway-info .tb-alipay-assure,
+#payway-info .tb-alipay-assure h5,
+#payway-info .tb-payway-list dt,
+#payway-info .tb-payway-list em,
+#payway-info .tb-bank p {
+    background: url(http://img02.taobaocdn.com/tps/i2/T1Nx1dXe4vXXXXXXXX-375-194.png) no-repeat;
+}
+/* common style */
+#payway-info .tb-title {
+    overflow: hidden;
+    text-indent: -9999px;
+}
+/* 信息披露区 */
+#payway-info .tb-alipay-assure {
+    padding: 0 0 2px 110px;
+    background-position: -282px -104px;
+}
+#payway-info .tb-alipay-assure h5 {
+    width: 376px;
+    height: 25px;
+}
+#payway-info .tb-alipay-assure p {
+    margin-top: 5px;
+}
+/* 支付方式列表 */
+#payway-info .tb-payway-list {
+    margin-top: 20px;
+    overflow: hidden;
+}
+#payway-info .tb-payway-list dt {
+    width: 230px;
+    height: 18px;
+    background-position: 16px -30px;
+}
+#payway-info .tb-payway-list dd {
+    margin: 25px 60px 38px 40px;
+}
+#payway-info .tb-payway-list h5 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e7e7e7;
+}
+#payway-info .tb-payway-list em {
+    position: relative;
+    top: 2px;
+    display: block;
+    width: 310px;
+    height: 22px;
+    border-bottom: 2px solid #dd9768;
+}
+#payway-info .tb-payway-list li {
+    min-height: 1px;
+    padding-left: 120px;
+    line-height: 2;
+    _height: 1px;
+    *zoom: 1;
+}
+#payway-info .tb-payway-list li:after {
+    content:'\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+#payway-info .tb-payway-list .tb-label {
+    display: inline;
+    float: left;
+    width: 110px;
+    margin-left: -120px;
+    text-align: right;
+    font-weight: bold;
+}
+#payway-info .tb-bank {
+    padding-bottom: 10px;
+}
+#payway-info .tb-bank li {
+    padding-bottom: 25px;
+}
+#payway-info .tb-bank em {
+    background-position: 0 -52px;
+}
+#payway-info .tb-bank p {
+    padding-left: 15px;
+    background-position: -366px -154px;
+}
+#payway-info .tb-bank .tb-link {
+    padding-left: 25px;
+    background-position: -354px -179px;
+}
+#payway-info .tb-bank .tb-remark {
+    font-size: 12px;
+}
+#payway-info .tb-others em {
+    background-position: 0 -77px;
+}
+#payway-info .tb-others li {
+    padding-bottom: 10px;
+}
+#payway-info .tb-others .tb-poundage {
+    color: #f60;
+}
+#cod-info {
+    margin-top: 30px;
+    _margin-top: 60px;
+}
+#cod-info .cod-explain dt {
+    _position: relative;
+    _top: 15px;
+}
+/* #payway-info END -------------------------------------------------- }}} */
+
+
+
+/* #cod-info：货到付款 -------------------------------------------------- {{{ */
+#cod-info .section-box {
+    padding: 0;
+    border: 0;
+}
+#cod-info .cod-explain {
+    margin: 0 0 0 10px;
+    padding: 75px 0 0 100px;
+    line-height: 20px;
+    text-indent: 0;
+    background: url(http://a.tbcdn.cn/app/tc/img/cod_flow_090316.png) no-repeat -3px 0;
+}
+#cod-info .cod-explain dt {
+    display: inline;
+    float: left;
+    width: 110px;
+    margin-left: -120px;
+    text-align: right;
+    font-weight: bold;
+    color: #9F0102;
+    _margin-top:-15px;
+}
+#cod-info .cod-explain dd {
+    margin-bottom: 10px;
+}
+#cod-info .cod-explain .point {
+    font-size: 14px;
+    color: #404040;
+}
+#cod-info .cod-explain .long-btn,
+#cod-info .cod-explain .long-btn:link {
+    margin: 10px 0 0;
+    color: #fff;
+    _margin: -5px 0 15px;
+}
+/* #cod-info END -------------------------------------------------- }}} */
+
+
+
+/* #guestbook：留言簿 -------------------------------------------------- {{{ */
+#response .smiley,
+#response .smiley-list,
+#response .small-btn {
+    background: url(http://img04.taobaocdn.com/tps/i4/T1x2lZXedjXXXXXXXX-270-122.png) no-repeat;
+}
+#guestbook:after,
+#guestbook .respond div:after,
+#guestbook dt:after,
+#guestbook dd:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: '\20';
+    height: 0;
+}
+#guestbook {
+    *zoom: 1;
+}
+#guestbook .login-hint {
+    position: relative;
+    padding: 20px 10px 10px;
+    background-color: #F6F9FC;
+    border-top: 1px solid #eee;
+    *zoom: 1;
+}
+#guestbook .login-hint ul {
+    clear: both;
+    margin-top: 10px;
+}
+#guestbook .login-hint li {
+    margin: 0 0 5px 20px;
+    list-style-type: circle;
+}
+#guestbook .ww-download-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+#guestbook dl {
+    padding: .6em 1em .6em 1.4em;
+    word-wrap: break-word;
+    border-bottom: 1px dashed #DDE4EA;
+}
+#guestbook dt,
+#guestbook dd {
+    position: relative;
+    z-index: 1;
+    width: 85%;
+    *zoom: 1;
+}
+#guestbook dt {
+    padding-bottom: 3px;
+}
+#guestbook dt em {
+    color: #FF6500;
+}
+#guestbook dd {
+    color: #999;
+}
+#guestbook dd img {
+    margin: 0 5px;
+}
+#guestbook dl strong {
+    font-weight: 400;
+}
+#guestbook dl span {
+    display: inline;
+    float: left;
+}
+#guestbook .dtreviewed {
+    position: absolute;
+    top: 0;
+    right: -115px;
+    width: 110px;
+    color: #999;
+}
+#guestbook .odd {
+    background-color: #F6F9FF;
+}
+#guestbook .pagination {
+    margin-top: 10px;
+}
+#guestbook .page-bottom {
+    display: inline;
+    float: right;
+}
+#response {
+    position: relative;
+    margin: 10px 0 0;
+    padding: 20px 0 10px 1em;
+    background-color: #F6F9FC;
+    border-top: 1px solid #eee;
+    border-bottom: 1px dashed #DDE4EA;
+}
+#response legend {
+    display: none;
+}
+#response .ww-download-link {
+    top: 20px;
+}
+#response input[type='checkbox'] {
+    margin-right: .5em;
+    vertical-align: middle;
+}
+#response .action,
+#response .captcha {
+    margin-bottom: 5px;
+    padding-left: 8em;
+    *zoom: 1;
+}
+#response .action span,
+#response .captcha span {
+    display: inline;
+    float: left;
+    width: 7em;
+    margin-left: -7.5em;
+    text-align: right;
+}
+#response .action {
+    padding-bottom: 10px;
+}
+#response .action textarea {
+    width: 410px;
+    height: 80px;
+    margin-bottom: 10px;
+    padding: 3px 2px 2px;
+    *padding: 2px 2px 2px;
+    border: 1px solid #A7A6AA;
+}
+#response .smiley {
+    position: absolute;
+    top: 80px;
+    left: 9em;
+    width: 28px;
+    height: 27px;
+    margin-left: -28px;
+    text-indent: -300px;
+    cursor: pointer;
+    _top: 81px;
+    _left: 8em;
+    _margin-left: -25px;
+}
+#response .smiley-list {
+    position: absolute;
+    top: 80px;
+    left: 9em;
+    width: 271px;
+    height: 91px;
+    overflow: hidden;
+    background-position: 0 -32px;
+    border: 1px solid #A7A6AA;
+    _top: 81px;
+    _left: 9em;
+    _margin-left: 3px;
+}
+#response .smiley-list a {
+    display: inline;
+    float: left;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    text-indent: -300px;
+}
+#response .smiley-list a:hover {
+    border: 1px solid #8D8978;
+    border-top: none;
+    border-bottom: none;
+}
+#response .small-btn {
+    display: block;
+    width: 52px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 12px;
+    cursor: pointer;
+    color: #fff;
+    background-position: -39px 1px;
+    border: none;
+}
+#response .captcha img {
+    cursor: pointer;
+}
+#response .captcha input {
+    display: inline;
+    float: left;
+    width: 4em;
+    margin-right: 1em;
+    padding: 3px 3px 2px;
+    border: 1px solid #A7A6AA;
+}
+/* #guestbook END -------------------------------------------------- }}} */
+
+
+
+/* #related-items：相关浏览 -------------------------------------------------- {{{ */
+#related-items {
+    position: relative;
+    margin-top: 20px;
+}
+#related-items .shop-list-wrap {
+    padding: 1px;
+    border: 1px solid #ededed;
+}
+#related-items .shop-list {
+    height: 228px;
+    margin: 0;
+    padding: 15px 0 10px 18px;
+    overflow: hidden;
+    background: #f9f9f9;
+    *zoom: 1;
+}
+#related-items .shop-list li {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 23%;
+    margin: 0 2% 0 0;
+}
+#related-items .shop-list .item {
+    width: auto;
+    text-align: left;
+}
+#related-items .pic {
+    margin: 0 auto;
+    overflow: hidden;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+#related-items .pic,
+#related-items .pic a {
+    width: 160px;
+    height: 160px;
+}
+#related-items .pic a {
+    display: table-cell;
+    vertical-align: middle;
+    *display: block;
+    *font-family: arial;
+    *font-size: 140px;
+    *line-height: 1;
+}
+#related-items .pic img {
+    vertical-align: middle;
+}
+#related-items .desc {
+    height: 36px;
+    padding-top: 5px;
+    overflow: hidden;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+#related-items .desc a:hover {
+    text-decoration: underline;
+    color: #f60;
+}
+#related-items .price {
+    padding-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#related-items .price strong {
+    padding-left: 16px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #f60;
+    background: url(http://img04.taobaocdn.com/tps/i4/T1q10ZXdhnXXXXXXXX-146-25.png) no-repeat -135px 4px;
+}
+/* #related-items END -------------------------------------------------- }}} */
+
+
+
+/* .exemption-clause：免责声明 -------------------------------------------------- {{{ */
+#bd .exemption-clause {
+    margin-top: 20px;
+}
+#bd .exemption-clause .tips {
+    display: block;
+    float: none;
+}
+/* .exemption-clause END -------------------------------------------------- }}} */
+/*
+
+
+
+/* 客服中心 {{{ */
+.tb-support-dropdown {
+    position: absolute;
+    right:0;
+    top:0;
+    width:90px;
+    overflow: hidden;
+}
+
+.tb-tabbar-wrap .tb-support-dropdown-hd {
+    line-height: 21px;
+    height: 21px;
+    width: 68px;
+    padding:7px 10px 0 10px;
+    _padding-top:10px;
+}
+
+
+.tb-support-dropdown-expanded .tb-support-dropdown-hd {
+    border-left:1px solid #d6d6d6;
+}
+
+.tb-tabbar-wrap .tb-support-dropdown-hd a,
+.tb-tabbar-wrap .tb-support-dropdown-hd a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.tb-support-dropdown-list {
+    background: #fff;
+    border: 1px solid #c9c9c9;
+    border-top: 0 none;
+    display: none;
+}
+
+.tb-support-dropdown-expanded .tb-support-dropdown-list {
+    display: block;
+    overflow: hidden;
+    width: 88px;;
+}
+
+.tb-support-dropdown-list .tb-support {
+    border-bottom: 1px dotted #ccc;
+    height: 29px;
+    line-height: 29px;
+}
+
+.tb-tabbar-wrap .tb-support-dropdown-hd img,
+.tb-support-dropdown-list .tb-support img {
+    vertical-align: middle;
+}
+
+.tb-support-dropdown-list .tb-support {
+    padding: 0 10px;
+    width: 70px;
+}
+.tb-support-dropdown-list .tb-support,
+.tb-support-dropdown-list .tb-support a, {
+    display:block;
+    height: 28px;;
+    line-height: 28px;
+    vertical-align: middle;
+    overflow: hidden;
+    color:#000;
+    text-decoration: none;
+}
+
+.tb-support-dropdown-list .tb-support a:hover {
+    color:#f60;
+}
+
+
+.tb-support-dropdown-list .last {
+    border:0;
+}
+
+/*tabbar 调整*/
+.grid-s5m0 .main-wrap {
+    padding-top:3px;
+}
+
+
+/* 客服中心 }}} */

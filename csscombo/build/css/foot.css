@@ -1,0 +1,115 @@
+/*
+combined files : 
+
+*/
+
+/**
+ * 2011-06-30，fix底通文本换行的问题，by changtian;
+ */
+
+/* #footer：------------------------------------------------------- {{{ */
+#footer {
+    clear: both;
+    width: 950px;
+    margin-top: 10px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid #D1D7DC;
+}
+#footer .c2c_column {
+    width: 904px;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    padding: 30px 23px 20px 23px;
+    text-align: left;
+    border-bottom: 1px solid #d1d7dc;
+}
+#footer .c2c_column .cp_logo {
+    display: block;
+    width: 85px;
+    height: 85px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#footer .c2c_column dl {
+    display: inline;
+    float: left;
+    margin: -105px 0 0 125px;
+}
+#footer .c2c_column .ensure {
+    width: 90px;
+    margin-left: 0;
+}
+#footer .c2c_column .newbie {
+    width: 95px;
+}
+#footer .c2c_column .payment {
+    width: 90px;
+    margin-left: 270px;
+}
+#footer .c2c_column .recommend {
+    width: 140px;
+    margin-left: 94px;
+}
+#footer .c2c_column dt {
+    height: 20px;
+    overflow: hidden;
+    background: url(http://img04.taobaocdn.com/tps/i4/T1FqRVXo4JXXXXXXXX.png) no-repeat -90px 0;
+}
+#footer .c2c_column .newbie dt {
+    background-position: -90px -20px;
+}
+#footer .c2c_column .payment dt {
+    background-position: -90px -40px;
+}
+#footer .c2c_column .recommend dt {
+    background-position: -90px -60px;
+}
+#footer .c2c_column dt em {
+    visibility: hidden;
+    font-size: 18px;
+    font-weight: bold;
+}
+#footer .c2c_column dd {
+    margin-top: 10px;
+}
+#footer .c2c_column dd li {
+    height: 22px;
+    overflow: hidden;
+    line-height: 1.8;
+}
+#footer .c2c_column dd a,
+#footer .c2c_column dd a:visited {
+    color: #666;
+}
+#footer .c2c_column dd a:hover{
+    color: #f60;
+}
+#footer .c2c_column dd span {
+    padding-left: 5px;
+    color: #999;
+}
+#footer .foot-nav {
+    display: block;
+    height: 20px;
+    margin: 0 auto 0;
+}
+#footer .foot-nav a {
+    margin: 0 7px;
+}
+#footer .ali-group {
+    margin: 5px auto;
+}
+#footer .ali-group a {
+    margin: 0 1px;
+}
+#footer .copyright {
+    clear: both;
+    margin: 15px auto 0;
+}
+#server-num {
+    font-size: 11px;
+    color: #fff;
+}
+/* #footer END ------------------------------------------------------- }}} */

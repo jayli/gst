@@ -1,0 +1,2298 @@
+/*
+combined files : 
+
+*/
+
+.tb-new #detail {
+    position: relative;
+    z-index: 20;
+}
+.tb-new #detail .tb-gallery{
+    width:312px;
+}
+.tb-new #detail .tb-property{
+    position:relative;
+    width:428px;
+    z-index:11;
+    overflow:visible;
+}
+.tb-new #detail .tb-shopinfo{
+    width:192px;
+}
+.tb-new #detail .edit-item{
+    color: blue;
+}
+.tb-new #detail .edit-item:hover{
+    color: blue;
+    text-decoration: underline;
+}
+#bd .tb-detail-hd h3 .act-1212{
+    color:#FF5400;
+}
+/* #hotel-item ----------------------------------------------------{{{ */
+#hotel-item{
+    padding:0 10px 0 2px;
+}
+#hotel-item a.hover{
+    color:#F60;
+}
+#hotel-item .hotel-form{
+    position:relative;
+}
+#hotel-item .clear:after{
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+#hotel-item .clear:after{
+    zoom:1;
+}
+#hotel-item a{
+    color:#415BC9;
+    text-decoration:none;
+}
+#hotel-item a:hover{
+    color:#F60;
+}
+#hotel-item .hidden{
+    display:none!important;
+}
+#hotel-item .hotel-meta{
+    position:relative;
+}
+#hotel-item .hotel-meta .unit{
+    float:left;
+    width:100%;
+    clear:both;
+    line-height:24px;
+    padding-bottom:10px;
+}
+#hotel-item .hotel-meta .unit .l{
+    float:left;
+    width:60px;
+    color:#868686;
+}
+#hotel-item .hotel-meta .unit .r{
+    float:left;
+    width:339px;
+}
+#hotel-item .total-nigth{
+    display:none;
+}
+#hotel-item .total-nigth strong{
+    padding:0 2px 0 1px;
+}
+#hotel-item .base-area{
+    padding-left: 8px;
+}
+#hotel-item .base-area .unit{
+    padding-bottom:0;
+}
+#hotel-item .base-area .unit .l, #hotel-item .base-area .unit .r{
+    padding-bottom:3px;
+}
+#hotel-item .base-area .unit .r{
+    width: 348px;
+}
+#hotel-item .total-price{
+    position:relative;
+    top:-2px;
+    color:#F60;
+    font-size:16px;
+    padding-right:5px;
+    vertical-align:middle;
+}
+#hotel-item .del{
+    font-size:12px;
+    top:0;
+    color:#404040;
+    font-weight:400;
+    vertical-align:baseline;
+    text-decoration:line-through;
+}
+#hotel-item .special-area{
+    z-index:1;
+    padding-left: 8px;
+    background-color:#F9F9F6;
+    border-top:1px solid #EBE7E2;
+    border-bottom:1px dashed #E0DDD6;
+}
+#hotel-item .special-area .first{
+    margin-top: 16px;
+}
+#hotel-item .special-area .change-tips{
+    display:none;
+    position:absolute;
+    top:-30px;
+    right:0;
+    color:#222;
+    height:21px;
+    line-height:21px;
+    padding:0 6px 0 18px;
+    border:1px solid #FFCC7F;
+    background:#FFFFE6 url(http://a.tbcdn.cn/sys/common/img/msg_bg.png) 0 -196px no-repeat;
+}
+#hotel-item .ju-prompt{
+    color:#222;
+    padding:4px 6px 4px 18px;
+    border:1px solid #FFCC7F;
+    background:#FFFFE6 url(http://a.tbcdn.cn/sys/common/img/msg_bg.png) 2px -196px no-repeat;
+}
+#hotel-item .ipt-date{
+    cursor:pointer;
+    width:77px;
+    height:17px;
+    line-height:16px;
+    padding:1px 2px;
+    outline: none;
+    border:1px solid #C6C6CA;
+    background:url(http://img02.taobaocdn.com/tps/i2/T122NIXoBAXXXXXXXX-200-200.png) no-repeat 0 -100px;
+}
+#hotel-item .sel-room{
+    width:50px;
+    border:1px solid #C6C6CA;
+}
+#hotel-item .room-many,#hotel-item .room-less{
+    display: inline-block;
+    width: 47px;
+    height: 14px;
+    margin-left: 5px;
+    background: #FFF url(http://img01.taobaocdn.com/tps/i1/T1MmuoXclAXXXXXXXX-47-28.png) no-repeat 0 0;
+}
+#hotel-item .room-less{
+    background-position: 0 -14px;
+}
+#hotel-item .hotel-sku{
+    width:304px;
+    *padding-bottom:4px;
+}
+#hotel-item .hotel-sku li{
+    position:relative;
+    float:left;
+    cursor:pointer;
+    height:21px;
+    line-height:21px;
+    margin:0 5px 6px 0;
+    white-space:nowrap;
+    border:1px solid #C6C6CA;
+
+    /*display: inline;
+    max-width: 294px;
+    width: auto!important;
+    width: 294px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;*/
+}
+
+#hotel-item .more {
+    clear: both;
+    float: left;
+    line-height: 1;
+    display: none;
+    padding-right: 17px;
+    margin-bottom: 6px;
+    background:transparent url(http://img01.taobaocdn.com/tps/i1/T1ZunyXjFXXXcZNPU.-13-40.png) right -31px no-repeat;
+}
+#hotel-item .more:hover {
+    color: #415BC9;
+}
+#hotel-item .hotel-sku-has-more .more {
+    display: block;
+}
+
+#hotel-item .price-policy li {
+    clear: both;
+}
+#hotel-item .price-policy li .gray {
+    color: #999;
+}
+#hotel-item .price-policy li .price {
+    color: #f60;
+    padding-right: 5px;
+}
+#hotel-item .price-policy li .price em {
+    line-height: 17px;
+    font-family: arial;
+}
+#hotel-item .hotel-sku li.selected,#hotel-item .hotel-sku li.hover{
+    border:2px solid #FF6D03;
+    height:19px;
+    line-height:19px;
+}
+#hotel-item .hotel-sku li a{
+    color:#404040;
+    display:block;
+    padding:0 6px;
+    outline:none;
+    background-color:#FFF;
+}
+#hotel-item .hotel-sku li.selected a,#hotel-item .hotel-sku li.hover a{
+    padding:0 5px;
+}
+#hotel-item .hotel-sku li i{
+    display:none;
+    position:absolute;
+    right:-2px;
+    bottom: -2px;
+    width:12px;
+    height:12px;
+    overflow:hidden;
+    background:url(http://img02.taobaocdn.com/tps/i2/T1IdOtXjVWXXcjCXMn-635-195.png) 0 -26px no-repeat;
+}
+#hotel-item .hotel-sku li.selected i{
+    display:block;
+}
+#hotel-item .hotel-sku-has-more .more{
+    display: block;
+}
+#hotel-item .hotel-sku-min .more {
+    background-position: right 5px;
+}
+#hotel-item .more .hide {
+    display: block;
+}
+#hotel-item .more .show {
+    display: none;
+}
+#hotel-item .hotel-sku-min .more .hide {
+    display: none;
+}
+#hotel-item .hotel-sku-min .more .show {
+    display: block;
+}
+#hotel-item .room-type {
+    overflow: hidden;
+}
+
+#hotel-item .price-policy {
+    overflow: hidden;
+}
+#hotel-item .price-policy-content {
+    clear: both;
+    color: #7f7f7f;
+    line-height: 1.5;
+}
+#hotel-item .price-policy-pannel li {
+    padding-bottom: 5px;
+}
+#hotel-item .price-policy-pannel .tit {
+    color: #fff;
+    padding: 2px 5px;
+    margin-right: 5px;
+    background-color: #390;
+}
+#hotel-item .price-policy-pannel .desc {
+    display: inline;
+}
+#hotel-item .price-policy-pannel .short {
+    display: none;
+}
+#hotel-item .price-policy-pannel .more-desc {
+    display: none;
+    margin-left: 5px;
+    padding-right: 17px;
+    background:transparent url(http://img01.taobaocdn.com/tps/i1/T1ZunyXjFXXXcZNPU.-13-40.png) right -30px no-repeat;
+}
+#hotel-item .price-policy-pannel .more-desc:hover {
+    color: #415BC9;
+}
+#hotel-item .price-policy-pannel .show {
+    display: none;
+}
+#hotel-item .price-policy-pannel .hide {
+    display: inline;
+}
+#hotel-item .price-policy-pannel .open .desc {
+    display: none;
+}
+#hotel-item .price-policy-pannel .open .short {
+    display: inline;
+}
+#hotel-item .price-policy-pannel .has-more .more-desc {
+    display: inline;
+}
+#hotel-item .price-policy-pannel .open .more-desc {
+    background-position: right 6px;
+}
+#hotel-item .price-policy-pannel .open .show {
+    display: inline;
+}
+#hotel-item .price-policy-pannel .open .hide {
+    display: none;
+}
+
+
+#hotel-item .pay-area{
+    padding:16px 0 0 8px;
+    background-color:#F9F9F6;
+    border-bottom:1px solid #EBE7E2;
+}
+#hotel-item .pay-type{
+    padding-bottom:4px;
+}
+#hotel-item .pay-type strong{
+    position:relative;
+    top:-1px;
+    color:#F60;
+    font-size:22px;
+    padding-right:3px;
+    vertical-align:middle;
+}
+#hotel-item .pay-type .hotel-pay{
+    font-size:14px;
+}
+#hotel-item .pay-type a{
+    margin-left:15px;
+    padding: 0 0 1px 2px;
+    border-bottom: 1px dashed;
+}
+#hotel-item .btns{
+    overflow:hidden;
+    zoom:1;
+    padding:5px 0 8px 60px;
+}
+#hotel-item .btns .buy-btn,#hotel-item .btns .buy-btn-disabled,#hotel-item .btns .fav-btn{
+    float:left;
+    border:0;
+    width:139px;
+    height:37px;
+    cursor:pointer;
+    overflow:hidden;
+    margin-right:10px;
+    background:#FFF url(http://img02.taobaocdn.com/tps/i2/T1l5z7XcJjXXXvEkYn-251-366.png) 0 0 no-repeat;
+}
+#hotel-item .btns .fav-btn{
+    text-indent:-9999px;
+    background-position:0 -329px;
+}
+#hotel-item .btns .buy-btn-disabled{
+    cursor:default;
+    background-position:0 -47px;
+}
+#hotel-item .booking .buy-btn{
+    width:251px;
+    background-position:0 -94px;
+}
+#hotel-item .booking .buy-btn-disabled{
+    width:251px;
+    cursor:default;
+    background-position:0 -141px;
+}
+#hotel-item .ihg .buy-btn{
+    width:199px;
+    background-position:0 -188px;
+}
+#hotel-item .ihg .buy-btn-disabled{
+    width:199px;
+    cursor:default;
+    background-position:0 -235px;
+}
+#hotel-item .tips{
+    color:#7F7F7F;
+    margin-left:60px;
+    padding-left:20px;
+    background:url(http://a.tbcdn.cn/sys/common/img/msg_bg.png) 0 -196px no-repeat;
+}
+#hotel-item .hotel-msg{
+    overflow: hidden;
+    zoom: 1;
+    padding: 5px 0 5px 60px;
+}
+#hotel-item .error-msg, #hotel-item .warning-msg{
+    float:left;
+    line-height:18px;
+    border:1px solid #FF8080;
+    padding:2px 10px 2px 23px;
+    background:#FFF2F2 url(http://a.tbcdn.cn/sys/common/img/msg_bg.png) 3px -47px no-repeat;
+}
+#hotel-item .warning-msg{
+    border-color: #FFCC7F;
+    background-color: #FFFFE5;
+    background-position: 3px -197px;
+}
+#hotel-item .pay-tip{
+    position: absolute;
+    padding: 0 5px;
+    margin-top: 2px;
+    white-space: nowrap;
+    background-color: #FEFFE2;
+    border: 1px solid #FBCB7E;
+    box-shadow: 1px 1px 1px 0 #B7B7B7;
+}
+#hotel-item .pay-tip i{
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    width: 9px;
+    height: 5px;
+    font-size: 0;
+    display: block;
+    z-index: 1;
+    margin-left: -4px;
+    background: url(http://img02.taobaocdn.com/tps/i2/T1i0TiXjJnXXaEx.MF-223-250.png) no-repeat right 0;
+}
+/* #hotel-item ----------------------------------------------------}}} */
+
+/* .promotion -----------------------------------------------------{{{ */
+.tb-shop .promotions{
+
+}
+.tb-shop .promotions em{
+    position:relative;
+    top:-2px;
+    color:#FFF;
+    padding:0 1px 0 2px;
+    background-color:#F07372;
+    vertical-align:middle;
+}
+.tb-shop .promotions em.act-1212{
+    float: left;
+    height: 17px;
+    top: 2px;
+    padding-bottom: 3px;
+    line-height: 17px;
+    padding-left: 75px;
+    background: url(http://img04.taobaocdn.com/tps/i4/T1XtkfXehgXXb6Jk6m-72-17.png) no-repeat 0 0;
+}
+.tb-shop .promotions strong{
+    position:relative;
+    top:-2px;
+    color:#FF5500;
+    font:700 16px Tahoma,Arial,Helvetica,sans-serif;
+    padding:0 5px;
+    vertical-align:middle;
+}
+.tb-shop .promotions .act-declare{
+    color: #555;
+    padding: 5px 10px;
+    background-color: #F6F5F5;
+}
+.tb-shop .promotions a{
+    color:#BEBEBE!important;
+    padding:0 7px 0 1px;
+    margin-left:15px;
+    text-decoration:none;
+    border-bottom:1px dashed #BEBEBE;
+    background:url(http://img01.taobaocdn.com/tps/i1/T1dSq8XkJiXXXXXXXX-7-50.png) right 7px no-repeat;
+}
+.tb-shop .promotions a:hover,.promotions a.open{
+    color:#BEBEBE;
+    text-decoration:none;
+    background-position:right -18px;
+}
+.tb-shop .promotions .cashback-tooltip {
+    position: relative;
+    display: inline-block;
+    *zoom: 1;
+    width: 16px;
+    height: 16px;
+    background:url(http://a.tbcdn.cn/sys/common/img/msg_bg.png) 0 -350px no-repeat;
+    vertical-align: -2px;
+    cursor: pointer;
+}
+.tb-shop .promotions .cashback-tip {
+    display: none;
+    position: absolute;
+    padding: 5px 10px;
+    border: 1px solid #dbdbdb;
+    top: 23px;
+    left: -150px;
+    width: 240px;
+    color: #808080;
+    background-color: #fff;
+    box-shadow: 2px 2px 0 #ebebeb;
+    -webkit-box-shadow: 2px 2px 0 #ebebeb;
+    -moz-box-shadow: 2px 2px 0 #ebebeb;
+}
+.tb-shop .promotions .icon-tip-arrow {
+    display: none;
+}
+.tb-shop .promotions .hover .cashback-tip {
+    display: block;
+}
+.tb-shop .promotions .hover .icon-tip-arrow {
+    display: block;
+    position: absolute;
+    top: 19px;
+    left: 4px;
+    width: 9px;
+    height: 6px;
+    background: url('http://img02.taobaocdn.com/tps/i2/T1rcWqXuJbXXbD_9II-650-550.png') no-repeat -300px 0;
+}
+.tb-shop .promotions-shop{
+    display:none;
+    font-size:12px;
+    font-family:tahoma;
+    padding:10px 15px;
+    margin-bottom:5px;
+    border:1px solid #E1E1E1;
+}
+.tb-shop .promotions-shop h3{
+    font-size:12px;
+    margin-bottom:5px;
+}
+.tb-shop .promotions-shop h3 span{
+    color:#808080;
+    font-weight:normal;
+    margin-left:10px;
+}
+.tb-shop .promotions-shop ul{
+    min-height:30px;
+    height:auto!important;
+    height:30px;
+    padding-left:54px;
+    background:url(http://img02.taobaocdn.com/tps/i2/T1tmucXbBnXXXXXXXX-100-70.png) -15px -40px no-repeat;
+}
+.tb-shop .promotions-shop.promotions-hotel ul{
+    background:url(http://img04.taobaocdn.com/tps/i4/T1g0F1XA4fXXXpkMHo-80-30.png) -15px 0px no-repeat;
+}
+.tb-shop .promotions-shop ul li{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    width:100%;
+}
+.tb-shop .promotions-shop ul li em{
+    color:#F60;
+}
+.tb-shop .promotions-shop ul li.remark{
+    color:#808080;
+}
+.promotions-list{
+    position:absolute;
+    top:-10000px;
+    left:-10000px;
+    z-index:1000;
+}
+.promotions-list ul{
+    padding:2px;
+    background:#E8E8E8;
+    border:1px solid #BEBEBE;
+}
+.promotions-list ul li{
+    background:#FFF;
+    padding:13px 13px 0;
+}
+.promotions-list ul li em{
+    padding:1px 1px 0 2px;
+    background:#E0E0E0;
+}
+.promotions-list ul li strong{
+    color:#F60;
+    padding:0 5px;
+}
+.promotions-list ul li.prompt{
+    color:#808080;
+    padding-bottom:13px;
+}
+.promotions-list span{
+    position:absolute;
+    top:-4px;
+    width:7px;
+    height:5px;
+    left:50%;
+    margin-left:-3px;
+    overflow:hidden;
+    background:url(http://img01.taobaocdn.com/tps/i1/T1dSq8XkJiXXXXXXXX-7-50.png) 0 -45px;
+}
+/* end .promotion -------------------------------------------------}}} */
+
+/* .price-calendar -----------------------------------------------------{{{ */
+.price-calendar{
+    position:absolute;
+    top:-10000px;
+    left:-10000px;
+    z-index:1000;
+}
+.price-calendar i{
+    position:absolute;
+    width:9px;
+    height:5px;
+    left:50%;
+    margin-left:-4px;
+    overflow:hidden;
+    top:-4px;
+    background:url(http://img03.taobaocdn.com/tps/i3/T1azrAXgJkXXanu6nr-9-5.gif) 0 0 no-repeat;
+}
+.price-calendar table{
+    border:1px solid #CBCBCB;
+    background-color:#FFF;
+    border-collapse:separate;
+    border-spacing:4px;
+}
+.price-calendar table td{
+    color:#909090;
+    width:79px;
+    height:69px;
+    font-family:arial;
+    text-align:center;
+    overflow:hidden;
+    line-height:20px;
+    vertical-align:top;
+}
+.price-calendar table .date{
+    color:#808080;
+    height:22px;
+    line-height:22px;
+    background:#EDEDED;
+    margin-bottom:5px;
+}
+.price-calendar table .price{
+    color:#F60;
+    font-weight:700;
+}
+/* end .price-calendar -------------------------------------------------}}} */
+
+/* #hotel-tab -----------------------------------------------------{{{ */
+#bd .expanded .hotel-tab ul,.hotel-tab .shadow{
+    width: 948px;
+}
+#bd .hotel-tab ul,.hotel-tab .shadow{
+    width: 748px;
+}
+.tb-shop .hotel-tab{
+    position: relative;
+}
+.tb-shop .hotel-tab ul{
+    height: 34px;
+    border: 1px solid #D7D7D7;
+    _overflow: hidden;
+    background-color: #FFF;
+}
+.tb-shop .hotel-tab .shadow{
+    height: 3px;
+    display: none;
+    overflow: hidden;
+    border: solid #D7D7D7;
+    border-width: 0 1px 1px;
+    background-color: #F6F6F6;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+.tb-shop .fixed{
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+}
+.tb-shop .fixed .shadow{
+    display: block;
+}
+.tb-shop .hotel-tab li{
+    position: relative;
+    float: left;
+    height: 34px;
+    font: 700 14px/34px Tahoma;
+}
+.tb-shop .hotel-tab li a{
+    position: relative;
+    float: left;
+    color: #000;
+    padding: 0 25px;
+    text-decoration: none;
+    border-right: 1px solid #D7D7D7;
+}
+.tb-shop .hotel-tab li a span{
+    color: #2853B4;
+}
+.tb-shop .hotel-tab li a:hover,.hotel-tab li a:hover span{
+    color:#F60;
+    text-decoration: underline;
+}
+.tb-shop .hotel-tab li.selected a{
+    border-top: 2px solid #F60;
+    border-bottom: 1px solid #F6F6F6;
+    line-height: 35px;
+    top: -3px;
+    background-color: #F6F6F6;
+}/*
+.hotel-tab li.selected a:hover{
+    color: #000;
+    text-decoration: none;
+}
+.hotel-tab li.selected a:hover span{
+    text-decoration: none;
+}*/
+/* end #hotel-tab -------------------------------------------------}}} */
+
+/* .hotel-tab-summary----------------------------------------------}}} */
+.tb-shop .hotel-tab-summary{
+    padding: 10px 25px;
+    margin-bottom: 10px;
+    border:1px solid #D7D7D7;
+    border-width: 0 1px 1px;
+    background-color: #F6F6F6;
+}
+.tb-shop .hotel-tab-summary .attribute ul{
+   *zoom: 1;
+}
+.tb-shop .hotel-tab-summary .attribute ul:after{
+   visibility: hidden;
+   display: block;
+   clear: both;
+   height: 0;
+   content: "\20";
+}
+.tb-shop .hotel-tab-summary .attribute .attr-list{
+    clear: both;
+    padding: 0;
+}
+.tb-shop .hotel-tab-summary .attribute .attr-list li{
+    display: inline;
+    float: left;
+    width: 206px;
+    height: 24px;
+    margin-right: 20px;
+    overflow: hidden;
+    line-height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.tb-shop .hotel-tab-summary .attribute .attr-list li.last{
+    width: 100%;
+}
+.tb-shop .hotel-tab-summary .attribute .attr-list li.row{
+    clear: both;
+    height: auto;
+    white-space: normal;
+}
+.tb-shop .hotel-tab-summary .attribute .attr-list li .refund-title,
+.tb-shop .hotel-tab-summary .attribute .attr-list li .refund-content{
+    float: left;
+}
+
+.tb-shop .hotel-tab-summary .attribute .attr-list li .refund-content {
+    margin-left: 5px;
+}
+.tb-shop .hotel-tab-summary .review-score p{
+    font-size: 14px;
+}
+.tb-shop .hotel-tab-summary .review-score strong{
+    color: #F60;
+    padding: 0 3px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.tb-shop .hotel-tab-summary .review-score span{
+    color: #AAA;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.tb-shop .hotel-tab-summary .review-score i{
+    font-style: normal;
+}
+.tb-shop .hotel-tab-summary .list-price strong{
+    color: #F50;
+}
+.tb-shop .hotel-tab-summary .list-price span{
+    color: #808080;
+    margin-left: 15px;
+}
+.tb-shop .hotel-tab-summary .hotel-intro{
+    margin: 5px 0;
+}
+.tb-shop .hotel-tab-summary .hotel-intro .name{
+    color: #404040;
+    font: 700 16px/1.5 \5fae\8f6f\96c5\9ed1;
+}
+.tb-shop .hotel-tab-summary .hotel-intro .address{
+    color: #666;
+}
+.tb-shop .hotel-tab-summary .hotel-intro p{
+    overflow: hidden;
+    zoom: 1;
+}
+.tb-shop .hotel-tab-summary .hotel-intro .name strong,.tb-shop .hotel-tab-summary .hotel-intro .name em{
+    float: left;
+}
+.tb-shop .hotel-tab-summary .hotel-intro .name .star-icon{
+    width: 64px;
+    height: 13px;
+    overflow: hidden;
+    margin: 6px 0 0 5px;
+    background: url(http://img01.taobaocdn.com/tps/i1/T1SpfQXhNbXXcO1jLo-600-550.png) -999px -999px no-repeat;
+}
+.tb-shop .hotel-tab-summary .hotel-intro .name .kezhan{
+    background-position: 0 -500px;
+}
+.tb-shop .hotel-tab-summary .hotel-intro .name .economy{
+    background-position: 0 -450px;
+}
+.tb-shop .hotel-tab-summary .hotel-intro .name .star2{
+    background-position: 0 -400px;
+}
+.tb-shop .hotel-tab-summary .hotel-intro .name .star3{
+    background-position: 0 -350px;
+}
+.tb-shop .hotel-tab-summary .hotel-intro .name .star4{
+    background-position: 0 -300px;
+}
+.tb-shop .hotel-tab-summary .hotel-intro .name .star5{
+    background-position: 0 -250px;
+}
+/* end .hotel-tab-summary------------------------------------------}}} */
+
+/* .hotel-tab-box--------------------------------------------------}}} */
+.tb-shop .hotel-tab-box{
+
+}
+.tb-shop .hotel-tab-box .title{
+    color: #FFF;
+    margin: 10px 0;
+    font-weight: 700;
+    line-height: 30px;
+    padding-left: 15px;
+    background-color: #E57529;
+}
+
+.tb-shop .hotel-tab-box .item-desc, .hotel-tab-box .how-to-buy{
+    width: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.tb-shop .hotel-tab-box .review-box, .hotel-tab-box .record-box{
+    padding-bottom: 10px;
+    min-height: 30px;
+    height: auto!important;
+    height: 30px;
+    /*background: #FFF url(http://img04.taobaocdn.com/tps/i4/T1pSWnXklgXXXXXXXX-24-24.gif) 50% 50% no-repeat;*/
+}
+
+/* Tab-评价详情 start */
+.tb-shop .review-box .review-acts .acts-current,
+.tb-shop .review-box .review-acts .acts-hot,
+.tb-shop .review-box .review-sort ul li i,
+.tb-shop .review-box .review-tag ul li.selected i,
+.tb-shop .hotel-tab-summary .review-r-link i,
+.tb-shop .tb-r-append b,
+.tb-shop .tb-current b,
+.tb-revicon-verified,
+.tb-icon-gift,
+.tb-r-attention .tb-r-att-close{
+    background: url("http://img04.taobaocdn.com/tps/i4/T1rxfOXo0lXXaS8Xf4-200-107.png") no-repeat scroll 100px 100px transparent;
+}
+
+.tb-shop .review-box .review-tag:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+
+#J_ReviewBox {
+    position: relative;
+    width: 100%;
+}
+
+/* 评价有礼 */
+#J_ReviewBox .tb-r-attention {
+    background: none repeat scroll 0 0 #FFFFE6;
+    border: 1px solid #FFCC7F;
+    color: #999999;
+    padding: 5px 10px;
+    position: relative;
+    zoom:1;
+}
+
+#J_ReviewBox .tb-r-attention .tb-r-att-close {
+    background-color: #FFCC7F;
+    background-position: -40px -86px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 0;
+    height: 13px;
+    line-height: 0;
+    outline: 0 none;
+    position: absolute;
+    right: 9px;
+    top: 6px;
+    width: 13px;
+}
+
+#J_ReviewBox .tb-r-marks .tb-icon-gift {
+    margin: 0;
+}
+#J_ReviewBox .tb-icon-gift {
+    background-position: -160px -90px;
+    float: left;
+    height: 15px;
+    margin-right: 5px;
+    width: 16px;
+    display:inline-block;
+}
+#J_ReviewBox .tb-r-marks {
+    background: none repeat scroll 0 0 #FBEECE;
+    border: 1px solid #F9E1AC;
+    cursor: default;
+    float: left;
+    margin-left: 5px;
+    padding: 2px;
+    height: 15px;
+}
+
+.tb-review-tip {
+    background: none repeat scroll 0 0 #DFDFDF;
+    border: 1px solid #888888;
+    padding: 3px;
+    position: absolute;
+    width: 170px;
+    visibility: hidden;
+}
+
+/* 旺旺 */
+.tb-shop .hotel-tab .ww-light{
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+
+.tb-shop .hotel-tab-summary .review-r-link {
+    float: right;
+    margin-top: 5px;
+    position: relative;
+    top: -25px;
+}
+
+.tb-shop .hotel-tab-summary .review-r-link a{
+    color: #404040;
+    text-decoration: none;
+}
+.tb-shop .hotel-tab-summary .review-r-link a:hover {
+    color: #808080;
+}
+
+.tb-shop .hotel-tab-summary .review-r-link i{
+    background-position: -181px -66px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: text-top;
+    width: 16px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.tb-shop .review-box{
+
+}
+.tb-shop .review-desc {
+    padding-left: 30px;
+}
+
+.tb-shop .review-desc .dynamic {
+}
+.tb-shop .time {
+    color: #AAA;
+}
+.tb-shop .mark {
+    color: #FF6600;
+}
+.tb-shop .review-box .review-roomtype{
+    position: relative;
+    height: 38px;
+    background-color: #F6F6F6;
+    margin: 10px 0;
+    display: none;
+    zoom:1;
+}
+
+.tb-shop .review-box .review-roomtype h5{
+    position: absolute;
+    top: 0;
+    width: 22px;
+    height: 34px;
+    z-index: 10;
+}
+.tb-shop .review-box .review-roomtype .l, .tb-shop .review-box .review-roomtype .l-disabled{
+    left: 0;
+    border-right: 1px solid #F3DCCC;
+}
+.tb-shop .review-box .review-roomtype .r, .tb-shop .review-box .review-roomtype .r-disabled{
+    right: 0;
+    border-left: 1px solid #F3DCCC;
+}
+.tb-shop .review-box .review-roomtype h5 span{
+    display: block;
+    width: 20px;
+    height: 32px;
+    cursor: default;
+    border: 1px solid #DBDBDB;
+    overflow: hidden;
+    text-indent: -999px;
+    background: #F7F7F7 url(http://img01.taobaocdn.com/tps/i1/T1xFvZXkpkXXcI9h79-13-126.gif) 0 0 no-repeat;
+}
+.tb-shop .review-box .review-roomtype .l span{
+    cursor: pointer;
+    background-position: 6px -78px;
+}
+.tb-shop .review-box .review-roomtype .r span{
+    cursor: pointer;
+    background-position: 6px -53px;
+}
+.tb-shop .review-box .review-roomtype .l-disabled span{
+    background-position: 6px 10px;
+}
+.tb-shop .review-box .review-roomtype .r-disabled span{
+    background-position: 6px -23px;
+}
+.tb-shop .review-box .review-roomtype .rt-box{
+    position: absolute;
+    height: 41px;
+    top: 0;
+    left: 22px;
+    right: 22px;
+    overflow: hidden;
+    zoom:1;
+}
+.tb-shop .review-box .review-roomtype .rt-box div{
+    height: 32px;
+    border: 1px solid #DBDBDB;
+}
+.tb-shop .review-box .review-roomtype .rt-box ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 999999px;
+    line-height: 32px;
+}
+.tb-shop .review-box .review-roomtype .rt-box ul li{
+    position: relative;
+    float: left;
+}
+.tb-shop .review-box .review-roomtype .rt-box ul li a{
+    float: left;
+    color: #404040;
+    font-size: 14px;
+    padding: 0 15px;
+    text-align: center;
+    border: 1px solid #DBDBDB;
+    border-left-width: 0;
+    min-width: 80px;
+}
+.tb-shop .review-box .review-roomtype .rt-box ul li a:hover{
+    text-decoration: none;
+    background-color: #FDE6D6;
+}
+.tb-shop .review-box .review-roomtype .rt-box ul li.selected a{
+    font-weight: 700;
+    outline: none;
+    background-color: #FDE6D6;
+    border: 1px solid #F3C392;
+    height: 32px;
+}
+.tb-shop .review-box .review-roomtype .rt-box ul li.selected a.first{
+    margin-left: -1px;
+    padding: 0px;
+    width: 90px;
+}
+
+.tb-shop .review-box .review-roomtype .rt-box ul li.none a{
+    border-right-width: 0;
+}
+.tb-shop .review-box .review-roomtype .rt-box ul li i{
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    width: 13px;
+    height: 8px;
+    margin-left: -6px;
+    overflow: hidden;
+    background: url(http://img01.taobaocdn.com/tps/i1/T1xFvZXkpkXXcI9h79-13-126.gif) 0 -118px no-repeat;
+}
+.tb-shop .review-box .review-roomtype .rt-box ul li.selected i{
+    display: block;
+}
+
+.tb-shop .review-box .review-bd {
+    border: 1px solid #DBDBDB;
+    position:relative;
+    zoom:1;
+    z-index: 10;
+}
+
+.tb-shop .review-box .review-content {
+    overflow: hidden;
+    position: relative;
+    zoom:1;
+    z-index:0;
+    min-height:120px;
+    *z-index: -1;
+}
+
+.tb-shop .review-box .review-tag {
+    background-color: #F6F6F6;
+    position: relative;
+    padding: 10px 0;
+    min-height: 30px;
+    border-top: none;
+    display: none;
+    zoom:1;
+}
+
+.tb-shop .review-box .review-tag h3 {
+    color: #000000;
+    float: left;
+    font-weight: normal;
+    margin: 3px 10px 0 0;
+    text-align: right;
+    width: 90px;
+}
+.tb-shop .review-box .review-tag ul {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.tb-shop .review-box .review-tag ul li {
+    float: left;
+    margin: 0 5px 5px 0;
+    position: relative;
+    white-space: nowrap;
+}
+
+.tb-shop .review-box .review-tag ul li a {
+    border: 0 none;
+    height: 26px;
+    line-height: 26px;
+    background: url('http://img04.taobaocdn.com/tps/i4/T135f.XeVdXXcXsQk.-1-26.png') repeat-x scroll 0 0 transparent;
+    box-shadow: 1px 1px 0 0 #D4D4D4;
+    color: #FFFFFF;
+    padding: 0 10px;
+    float: left;
+    text-decoration: none;
+}
+
+.tb-shop .review-box .review-tag ul li.selected {
+    border: 2px solid #FF6D03;
+}
+
+.tb-shop .review-box .review-tag ul li.selected a{
+    background: #FFF;
+    color: #000;
+    height: 22px;
+    line-height: 22px;
+    box-shadow: none;
+    padding: 0 8px;
+}
+
+.tb-shop .review-box .review-tag ul li.selected i{
+    background-position: -11px 0;
+    height: 11px;
+    width: 11px;
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+}
+
+/* 过滤 */
+.tb-shop .review-box .review-filter{
+    background: none repeat scroll 0 0 #FCFCFC;
+    border-top: 2px solid #E9E9E9;
+    color: #404040;
+    margin-top: -1px;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+    display: none;
+    zoom: 1;
+    height: 20px;
+}
+
+.tb-shop .review-box .review-filter .filter-list,
+.tb-shop .review-box .review-filter .add-list{
+    padding-left: 30px;
+    display: none;
+}
+
+.tb-shop .review-box .review-filter #review-addreply {
+    margin: 0;
+    position: relative;
+    top: -2px;
+}
+
+.tb-shop .review-box .filter-list li{
+    float: left;
+    margin-right: 10px;
+}
+
+.tb-shop .review-box .filter-list li.filter-long{
+    min-width: 90px;
+}
+
+.tb-shop .review-box .review-filter li input,
+.tb-shop .review-box .review-filter li label{
+    margin-right: 6px;
+    vertical-align: text-bottom;
+}
+
+.tb-shop .review-box .review-filter li label span {
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.tb-shop .review-box .review-filter .filter-current .r-title {
+    font-weight: bold;
+}
+
+.tb-shop .review-box .review-filter .r-count{
+    color: #BBBBBB;
+    font-size:12px;
+}
+
+.tb-shop .review-box .review-acts {
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    z-index: 10;
+}
+
+#review-hascnt {
+    margin: 0;
+    position: relative;
+    top: -2px;
+}
+
+.tb-shop .review-box .review-acts li{
+    float: left;
+    margin-left: 5px;
+    z-index: 10;
+}
+
+/* 筛选 */
+.tb-shop .review-box .review-acts .review-sort-hover .acts-current {
+    background-position: 0 -62px;
+}
+
+.tb-shop .review-box .review-acts .acts-current {
+    background-position: 0 -41px;
+    cursor: default;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 10px;
+    width: 81px;
+}
+
+.tb-shop .review-box .review-acts .review-sort ul {
+    background: #FFF;
+    border-color: #DDD;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    display: none;
+    overflow: hidden;
+    padding: 0 2px;
+    position: absolute;
+    width: 85px;
+    z-index: 10;
+}
+
+.tb-shop .review-box .review-acts .acts-hot {
+    background-position: -178px -50px;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    width: 21px;
+    display: inline-block;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.tb-shop .review-box .review-sort ul a {
+    background: #FFF;
+    color: #404040;
+    cursor: pointer;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 5px;
+    text-decoration: none;
+}
+
+.tb-shop .review-box .review-sort ul a:hover{
+    color: #808080;
+    text-decoration: none;
+}
+
+.tb-shop .review-box .review-sort ul li {
+    margin-top: -1px;
+    border-top: 1px solid #DDD;
+    float: none;
+    margin-left: 0px;
+}
+
+.tb-shop .review-box .review-sort ul li i{
+    display: inline-block;
+    height: 16px;
+    vertical-align: middle;
+    width: 25px;
+}
+
+.tb-shop .review-box .review-sort .review-sort-default i{
+    background-position: -178px -84px;
+}
+
+.tb-shop .review-box .review-sort .review-sort-time i{
+    background-position: -178px 0px;
+}
+
+.tb-shop .review-box .review-sort .review-sort-heat i{
+    background-position: -178px -16px;
+}
+
+.tb-shop .review-box .review-sort .review-sort-rank i{
+    background-position: -178px -34px;
+}
+
+#J_ReviewBox .tb-loading_stat {
+    padding-top: 36px;
+    text-align: center;
+    width: 100%;
+    z-index: 9;
+}
+
+#J_ReviewBox .tb-no-result {
+    height: 80px;
+    padding: 20px;
+}
+
+#J_ReviewBox .review-list {
+
+}
+
+#J_ReviewBox .starscore li {
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+
+#J_ReviewBox .starscore span {
+    font-size: 14px;
+    display: inline-block;
+    color: #404040;
+    *diaplay: inline;
+    zoom: 1;
+}
+
+#J_ReviewBox .starscore .stars{
+    color: #B6B6B6;
+    display: inline-block;
+    height: 21px;
+    line-height: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 70px;
+    width: auto\9;
+    margin-left: 5px;
+    vertical-align: bottom;
+    padding-left: 10px\0;
+
+}
+
+#J_ReviewBox .starscore .stars em{
+    color: #FF944C;
+    display: block;
+    height: 20px;
+    left: 0;
+    line-height: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    padding-left: 10px\0;
+}
+
+#J_ReviewBox .tb-r-comment{
+    border-bottom: 1px solid #D4D4D4;
+    list-style: none outside none;
+    outline: 0 none;
+    position: relative;
+    zoom:1;
+}
+
+#J_ReviewBox .tb-r-comment .tb-r-rank a {
+    padding: 2px 2px 0;
+}
+
+#J_ReviewBox .tb-r-comment .tb-r-rank a:hover {
+    background-color: #FFECD0;
+}
+
+#J_ReviewBox .tb-r-buyer{
+    float: left;
+    margin-right: 10px;
+    padding-top: 18px;
+    width: 100px;
+}
+
+#J_ReviewBox.tb-r-buyer .tb-r-avatar {
+    line-height: 1.5;
+    text-align: center;
+}
+
+#J_ReviewBox .tb-r-buyer .tb-r-avatar img {
+    display: inline;
+}
+
+#J_ReviewBox .tb-r-bd {
+    min-height: 60px;
+    overflow: hidden;
+    padding: 10px 10px 40px 0;
+    position: relative;
+    zoom: 1;
+}
+
+#J_ReviewBox .tb-r-bd .starscore {
+    zoom:1;
+}
+
+#J_ReviewBox .tb-r-append {
+    background: #FAFAFA;
+    border: 1px solid #EFEFEF;
+    margin: 12px 0 0 0;
+    padding: 0 12px 12px;
+    position: relative;
+}
+
+#J_ReviewBox .tb-r-reply {
+    color: #BD7F00;
+    font-size: 14px;
+    margin-top: 12px;
+    max-width: 580px;
+}
+
+#J_ReviewBox .tb-r-cnt {
+    color: #404040;
+    margin-top: 8px;
+    max-width: 580px;
+}
+
+#J_ReviewBox .tb-r-cnt em {
+    background: #FFFF00;
+}
+
+#J_ReviewBox .tb-r-arrow-up {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    border: transparent dashed 7px;
+    border-bottom: #f5f5f5 solid 7px;
+    top: -14px;
+    left: 36px;
+}
+
+#J_ReviewBox .tb-r-arrow-up-top {
+    border: transparent dashed 7px;
+    border-bottom: #FAFAFA solid 7px;
+    top: -13px;
+    left: 36px;
+}
+
+#J_ReviewBox .tb-r-photos{
+    margin: 10px 0;
+}
+#J_ReviewBox .tb-r-photos li {
+    border: 2px solid #F2F2F2;
+    float: left;
+    margin-right: 5px;
+    padding: 2px;
+    position: relative;
+    transition: border-color 0.2s ease-out 0s;
+}
+
+#J_ReviewBox .tb-r-photos .tb-current {
+    border: 2px solid #F49E00;
+    border-radius: 2px 2px 2px 2px;
+    cursor: auto;
+}
+
+#J_ReviewBox .tb-r-photos .tb-current img {
+    cursor: url("http://assets.daily.taobao.net/img/common/zoomout.png"), url("http://assets.daily.taobao.net/img/common/zoom_out.cur"), auto;
+}
+#J_ReviewBox .tb-r-photos .tb-current .tb-photos-arrow {
+    bottom: -12px;
+    opacity: 1;
+    border-top-color: #F49E00;
+}
+
+#J_ReviewBox .tb-r-photos li:hover {
+    border: 2px solid #F49E00;
+}
+
+#J_ReviewBox .tb-r-photos img {
+    cursor: url("http://assets.daily.taobao.net/img/common/zoomin.png"), url("http://assets.daily.taobao.net/img/common/zoom_in.cur"), auto;
+    display: block;
+    height: 40px;
+    width: 40px;
+}
+
+#J_ReviewBox .tb-r-photo-viewer {
+    background: #FFF;
+    border: 1px solid #CCC;
+    float: left;
+    margin: 0 0 10px;
+    padding: 2px;
+    position: relative;
+    display: none;
+    width: auto!important;
+}
+
+#J_ReviewBox .tb-r-photo-viewer img{
+    border: 0 none;
+    cursor: url("http://assets.daily.taobao.net/img/common/zoomout.png"), url("http://assets.daily.taobao.net/img/common/zoom_out.cur"), auto;
+    vertical-align: middle;
+    display: inline;
+}
+
+#J_ReviewBox .tb-r-cnt, #reviews .tb-r-reply {
+    font-size: 14px;
+    word-wrap: break-word;
+}
+#J_ReviewBox .tb-r-info {
+    clear: both;
+    color: #B0B0B0;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+#J_ReviewBox .tb-r-date {
+    margin-right: 8px;
+}
+
+#J_ReviewBox .tb-r-act {
+    bottom: 12px;
+    position: absolute;
+    right: 10px;
+}
+
+#J_ReviewBox .tb-r-useful {
+    float: left;
+    margin-left: 5px;
+}
+
+#J_ReviewBox .tb-r-useful-zero .tb-r-ucount {
+    color: #808080;
+}
+
+#J_ReviewBox .tb-r-useful .tb-r-ucount {
+    color: #FF6600;
+}
+
+#J_ReviewBox .tb-r-sharebtn, .tb-useful-btn, .tb-r-useful .tb-r-msg {
+    border: 1px solid transparent;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+}
+
+#J_ReviewBox .tb-useful-btn {
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 0 6px;
+    background: #fff;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2YxZjFmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2UxZTFlMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNmY2ZjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,#fff 0,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#fff),color-stop(50%,#f1f1f1),color-stop(51%,#e1e1e1),color-stop(100%,#f6f6f6));
+    background: -webkit-linear-gradient(top,#fff 0,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    background: -o-linear-gradient(top,#fff 0,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    background: -ms-linear-gradient(top,#fff 0,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    background: linear-gradient(top,#fff 0,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#f6f6f6',GradientType=0)
+}
+#J_ReviewBox .tb-useful-btn:hover {
+    color: #404040;
+    text-decoration: none
+}
+#J_ReviewBox .tb-r-useful {
+    float: left;
+    margin-left: 5px
+}
+#J_ReviewBox .tb-r-sharebtn, .tb-useful-btn, .tb-r-useful .tb-r-msg {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid transparent
+}
+#J_ReviewBox .tb-r-useful .tb-r-msg {
+    display: none;
+    padding: 0 2px;
+    border: 1px solid #ccc;
+    background: #f4f4f4;
+    color: #f60
+}
+#J_ReviewBox .tb-r-useful .tb-r-ucount {
+    color: #f60
+}
+#J_ReviewBox .tb-r-useful-zero .tb-r-ucount {
+    color: #808080
+}
+
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+
+.tb-revcard {
+    width: 200px;
+}
+.tb-revcard-bd {
+    background: #FFF;
+    border: 2px solid #CECECE;
+    padding: 0 10px;
+}
+.tb-revcard-title {
+    border-bottom: 1px solid #E4E4E4;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.tb-revcard-title a {
+    color: #8AABC6;
+    text-decoration: none;
+}
+
+.tb-revcard-cnt {
+    padding: 5px;
+}
+.tb-revcard-line {
+    margin: 2px 0;
+}
+.tb-revcard-line img {
+    vertical-align: middle;
+}
+.tb-revcard-level {
+    color: #FF6600;
+    font-weight: bold;
+}
+.tb-revcard-date {
+    color: #AAA;
+    margin-top: 5px;
+}
+.tb-revicon {
+    vertical-align: middle;
+}
+.tb-revicon-verified {
+    background-position: -142px -92px;
+    height: 12px;
+    width: 16px;
+    display:inline-block;
+    *display:inline;
+    zoom: 1;
+    padding-right:2px;
+    position: relative;
+    top: -2px;
+}
+
+.tb-revcard-arrow, .tb-revcard-arrow-inner {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent #FFFFFF transparent transparent;
+    border-image: none;
+    border-style: dashed solid dashed dashed;
+    border-width: 9px;
+    font-size: 0;
+    left: -16px;
+    line-height: 0;
+    position: absolute;
+    top: 30px;
+}
+.tb-revcard-arrow {
+    border-right: 9px solid #CCCCCC;
+    left: -18px;
+}
+
+#J_ReviewBox .tb-isloading .tb-r-normal,
+#J_ReviewBox .tb-r-isdone .tb-r-normal,
+#J_ReviewBox .tb-r-msg {
+    display: none;
+}
+
+#J_ReviewBox .tb-isloading .tb-r-msg {
+    background: url("http://img02.taobaocdn.com/tps/i2/T1TSzXXotXXXbrlo..-14-14.gif") no-repeat scroll 3px 3px #F4F4F4;
+    display: block;
+    padding-left: 20px;
+}
+#reviews .tb-r-isdone .tb-r-msg {
+    display: block;
+}
+
+.ks-overlay {
+    position:absolute;
+    left:-9999px;
+    top:-9999px;
+}
+
+.userful-loing-popupPanel {
+    background: none repeat scroll 0 0 #F1F9FB;
+    border: 1px solid #B2D1FF;
+    overflow: hidden;
+    padding: 0px;
+    position: absolute;
+    z-index: 10003!important;
+}
+.ks-ext-mask {
+     z-index: 10001!important;
+     background: #000;
+     opacity: 0.6;
+     filter:alpha(opacity=60);
+}
+/* Tab-评价详情 end */
+
+
+/* Tab-成交记录 */
+.tb-shop .hotel-tab-box .record-box table{
+    width: 100%;
+    background-color: #FFF;
+}
+.tb-shop .hotel-tab-box .record-box table th{
+    text-align: left;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #F0F0F0;
+}
+.tb-shop .hotel-tab-box .record-box table td{
+    text-align: left;
+    padding: 10px 5px 10px 0;
+    border-bottom: 1px dashed #F2F0F0;
+}
+.tb-shop .hotel-tab-box .record-box table .first{
+    padding-left: 15px;
+}
+.tb-shop .hotel-tab-box .record-box table .first em{
+    color: #999999;
+    font-weight: 400;
+    padding-left: 3px;
+}
+.tb-shop .hotel-tab-box .record-box .record-nick{
+    width: 20%;
+}
+.tb-shop .hotel-tab-box .record-box .record-nick span{
+    display: block;
+    margin-bottom: 3px;
+}
+.tb-shop .hotel-tab-box .record-box .record-nick img{
+    margin-right: 5px;
+}
+.tb-shop .hotel-tab-box .record-box .record-price{
+    width: 25%;
+    color: #F50;
+    font-weight: 700;
+}
+.tb-shop .hotel-tab-box .record-box .record-price span{
+    color: #808080;
+    font-weight: 400;
+}
+.tb-shop .hotel-tab-box .record-box .record-price .discount{
+    display: inline-block;
+    width: 18px;
+    height: 16px;
+    margin-left: 5px;
+    vertical-align: middle;
+    background: #FFF url(http://img02.taobaocdn.com/tps/i2/T1OASeXe4zXXXXXXXX-18-16.png) 0 0 no-repeat;
+}
+.tb-shop .hotel-tab-box .record-box .record-amount{
+    width: 10%;
+}
+.tb-shop .hotel-tab-box .record-box .record-time{
+    width: 20%;
+}
+.tb-shop .hotel-tab-box .record-box .record-name{
+    width: 25%;
+}
+
+/* Tab-宝贝详情 */
+.tb-shop .hotel-tab-box .hotel-desc{
+
+}
+.tb-shop .hotel-tab-box .hotel-desc dl{
+    overflow: hidden;
+    zoom: 1;
+    padding: 10px 25px 0;
+}
+.tb-shop .hotel-tab-box .hotel-desc dl dt{
+    font-weight: 700;
+}
+.tb-shop .hotel-tab-box .hotel-desc dl dd{
+    margin-bottom: 15px;
+}
+.tb-shop .hotel-tab-box .hotel-map{
+    width: 685px;
+    height: 300px;
+}
+
+/* end .hotel-tab-box----------------------------------------------}}} */
+
+/* 没有记录提示----------------------------------------------------}}} */
+.no-prompt{
+    height:50px;
+    background-color: #FFF;
+}
+.no-prompt p{
+    padding-left: 20px;
+    background: #FFF url(http://a.tbcdn.cn/sys/common/img/msg_bg.png) 0 -149px no-repeat;
+}
+/* end 没有记录提示------------------------------------------------}}} */
+
+/* 分页------------------------------------------------------------}}} */
+.tb-shop .hotel-page-box{
+    overflow: hidden;
+    zoom: 1;
+    padding-top: 10px;
+}
+.tb-shop .hotel-page-box .hotel-page{
+    float: right;
+}
+.tb-shop .hotel-page-box .hotel-page a, .tb-shop .hotel-page-box .hotel-page span{
+    float: left;
+    height: 24px;
+    padding: 0 5px;
+    margin-left: 3px;
+    line-height: 24px;
+    text-align: center;
+    min-width: 16px;
+    width: auto!important;
+    width: 16px;
+    border: 1px solid #CCC;
+    background: #FFF url(http://img04.taobaocdn.com/tps/i4/T1cP85XihuXXXXXXXX-13-101.png) -999px -999px no-repeat;
+}
+.tb-shop .hotel-page-box .hotel-page a:hover{
+    text-decoration: none;
+    border: 1px solid #FD6D01;
+}
+.tb-shop .hotel-page-box .hotel-page a.current{
+    color: #FD6D01;
+    cursor: text;
+    font-weight: 700;
+    border: 1px solid #FD6D01;
+    background-color: #FFEDE1;
+}
+.tb-shop .hotel-page-box .hotel-page a.prev-page{
+    width: 36px;
+    padding-left: 16px;
+    background-position: 0 -12px;
+}
+.tb-shop .hotel-page-box .hotel-page a.next-page{
+    width: 36px;
+    padding-right: 16px;
+    background-position: 42px -50px;
+}
+.tb-shop .hotel-page-box .hotel-page a.first-page{
+    width: 36px;
+    cursor: text;
+    color: #808080;
+    padding-left: 16px;
+    background-position: 5px 8px;
+}
+.tb-shop .hotel-page-box .hotel-page a.first-page:hover{
+    border-color: #CCC;
+}
+.tb-shop .hotel-page-box .hotel-page a.last-page{
+    width: 36px;
+    cursor: text;
+    color: #808080;
+    padding-right: 16px;
+    background-position: 47px -31px;
+}
+.tb-shop .hotel-page-box .hotel-page a.last-page:hover{
+    border-color: #CCC;
+}
+.tb-shop .hotel-page-box .hotel-page a.page-break, .hotel-page-box .hotel-page a.page-break:hover{
+    cursor: text;
+    color: #C0C0C0;
+    border-color: #FFF;
+}
+/* end 没有记录提示------------------------------------------------}}} */
+.real-price {
+    background: url("http://img03.taobaocdn.com/tps/i3/T1wZLjXgdsXXcO1jLo-600-550.png") no-repeat scroll -100px -50px #FFFFFF;
+    display: inline-block;
+    height: 14px;
+    margin: 5px 0 0 10px;
+    overflow: hidden;
+    text-indent: -999px;
+    width: 47px;
+}
+/* 宝贝下架-------------------------------------------------------}}} */
+.hotel-off-shelf{
+    padding: 1px;
+    border: 1px solid #EDEDED;
+}
+.hotel-off-shelf dl{
+    padding: 5px 10px;
+    line-height: 25px;
+    background-color: #F9F9F9;
+}
+.hotel-off-shelf dl dt{
+    color: #353535;
+    font-size: 14px;
+    font-weight: 700;
+}
+.hotel-off-shelf dl dt span{
+    color: #7F7A80;
+    font-size: 12px;
+    font-weight: 400;
+}
+.hotel-off-shelf dl dt span a{
+    vertical-align: middle;
+}
+.hotel-off-shelf dl dd{
+    color: #858585;
+}
+/* end 宝贝下架---------------------------------------------------}}} */
+/* 回到顶部-------------------------------------------------------}}} */
+#hotel-gotop-wrap .hotel-gotop,
+#hotel-gotop-wrap .hotel-feedback{
+    display: block;
+    width: 47px;
+    overflow: hidden;
+    outline: none;
+    background: url(http://img04.taobaocdn.com/tps/i4/T1zBbuXeFjXXchg7H5-47-167.png) 0 0 no-repeat;
+}
+#hotel-gotop-wrap .hotel-gotop{
+    height: 47px;
+}
+#hotel-gotop-wrap .hotel-gotop:hover{
+    background-position: 0 -94px;
+}
+#hotel-gotop-wrap .hotel-feedback{
+    height: 25px;
+    margin-top: 1px;
+    background-position: 0 -48px;
+}
+#hotel-gotop-wrap .hotel-feedback:hover{
+    background-position: 0 -142px;
+}
+
+#hotel-gotop-wrap .join-wrap {
+    cursor: pointer;
+    margin-bottom: 12px;
+    position: relative;
+    left: -2px;
+}
+
+#hotel-gotop-wrap .join-wrap-hide {
+    display: none;
+}
+#hotel-gotop-wrap .hotel-adm-join{
+    display: block;
+    width: 52px;
+    height: 72px;
+    position: relative;
+    background: url('http://img01.taobaocdn.com/tps/i1/T1ApyPXvXiXXay1yZ5-110-71.png') no-repeat scroll -1px 0 transparent;
+}
+#hotel-gotop-wrap .join-link {
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    padding: 1px 0;
+    background: #32A010;
+    color: #FFF;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#hotel-gotop-wrap .join-link:hover {
+    text-decoration: none;
+}
+
+#hotel-gotop-wrap .join-wrap-hover .hotel-adm-join {
+    background-position: -57px 0;
+}
+
+#hotel-gotop-wrap .join-wrap-hover .join-link {
+    background: #F40;
+}
+
+/* end 速选酒店入口---------------------------------------------------}}} */
+
+/* 聚划算不能购买提示----------------------------------------------}}} */
+.hotel-cant-buy{
+    font-size:14px;
+    font-weight:700;
+    padding-left:8px;
+    line-height:70px;
+    background-color:#F9F9F6;
+    border-bottom:1px solid #EBE7E2;
+}
+/* end 聚划算不能购买提示------------------------------------------}}} */
+/* 外跳----------------------------------------------------------}}} */
+#hotel-jump .hidden{
+    display:none;
+}
+#hotel-jump .logo{
+    overflow:hidden;
+    margin:55px 5px 0;
+}
+#hotel-jump .logo img{
+    vertical-align:middle;
+    margin-left:10px;
+}
+#hotel-jump .tips{
+    font-size:14px;
+    text-align:left;
+    line-height:25px;
+    margin:52px 15px 10px;
+}
+#hotel-jump .error{
+    font-size:14px;
+    margin-top:62px;
+    text-align:center;
+}
+#hotel-jump .error a{
+    text-decoration:underline;
+    margin:0 2px;
+}
+#hotel-jump .loading{
+    text-align:center;
+}
+/* end 外跳------------------------------------------------------}}} */
+
+/* 实价有房对话框-------------------------------------------------}}} */
+#real-price-dialog{
+    font-size: 14px;
+    line-height: 25px;
+    padding: 25px 40px;
+}
+#real-price-dialog .center{
+    margin-top: 20px;
+    line-height: 29px;
+    text-align: center;
+}
+#real-price-dialog a{
+    margin: 5px 10px 0;
+}
+/* end 实价有房对话框----------------------------------------------}}} */
+
+/* 双12活动-------------------------------------------------------}}} */
+#hotel-item .act-1212{
+    cursor: pointer;
+    position: relative;
+}
+#hotel-item .act-1212 li{
+    width: 328px;
+    padding: 5px 10px;
+    background-color: #F6F5F5;
+}
+#hotel-item .act-1212 li strong{
+    color: #FD6631;
+    font-size: 14px;
+    padding: 0 2px 5px 78px;
+    background: url(http://img04.taobaocdn.com/tps/i4/T1XtkfXehgXXb6Jk6m-72-17.png) 0 0 no-repeat;
+}
+#hotel-item li.seller-say{
+    color: #555;
+    width: 326px;
+    display: none;
+    position: absolute;
+    border: 1px solid #E8E8E8;
+    background-color: #FFFFD3;
+}
+#hotel-item .hover li.seller-say{
+    display: block;
+}
+/* end 双12活动---------------------------------------------------}}} */
+
+/* etao接入-------------------------------------------------------}}} */
+#hotel-item .etao {
+    padding-left:60px;
+}
+#hotel-item .etao strong {
+    color: #F60;
+}
+/* end etao接入---------------------------------------------------}}} */
+
+/* sns------------------------------------------------------------}}} */
+.tb-shop .hotel-share-action {
+    /*position: relative;*/
+    margin: 20px 0 30px;
+    padding-left: 26px;
+}
+.tb-shop .hotel-share-action li {
+    float: left;
+    position: relative;
+}
+.tb-shop .hotel-share-action .hotel-share {
+    margin-right: 10px;
+}
+.tb-shop .hotel-share-action .hotel-sns-btn,
+.tb-shop .hotel-share-action .hotel-sns-btn span,
+.tb-shop .hotel-share-action .hotel-sns-btn i {
+    background: url(http://img01.taobaocdn.com/tps/i1/T1RHDUXfxcXXc1ZBMD-192-709.png) 0 0 no-repeat;
+}
+.tb-shop .hotel-share-action .hotel-sns-btn {
+    float: left;
+    color: #404040;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 10px;
+    background-position: 0 -504px;
+}
+.tb-shop .hotel-share-action .hotel-btshare {
+    position: absolute;
+    top: 27px;
+    left: 0;
+    *top: 11px;
+}
+.tb-shop .hotel-share-action .hotel-sns-btn:hover {
+    color: #404040;
+    text-decoration: none;
+    background-position: 0 -541px;
+}
+.tb-shop .hotel-share-action .hotel-sns-btn span {
+    float: left;
+    cursor: pointer;
+    padding-right: 10px;
+    background-position: right -504px;
+}
+.tb-shop .hotel-share-action .hotel-sns-btn:hover span {
+    background-position: right -541px;
+}
+.tb-shop .hotel-share-action .hotel-sns-btn i {
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin: 7px 3px 0 0;
+}
+.tb-shop .hotel-share-action .hotel-share i {
+    background-position: 0 -578px;
+}
+.tb-shop .hotel-share-action .hotel-fav i {
+    background-position: -22px -578px;
+}
+/*.tb-shop .hotel-share-action a, .hotel-share-action a span{
+    float: left;
+    color: #404040;
+    height: 27px;
+    padding-left: 10px;
+}*/
+/*.tb-shop .hotel-share-action a:hover{
+    text-decoration: none;
+    background-position: 0 -541px;
+}
+.tb-shop .hotel-share-action a:hover span{
+    background-position: right -541px;
+}
+.tb-shop .hotel-share-action a, .hotel-share-action a span, .hotel-share-action a i {
+    background-image: url(http://img01.taobaocdn.com/tps/i1/T1RHDUXfxcXXc1ZBMD-192-709.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: 0 -504px;
+}
+.tb-shop .hotel-share-action a span {
+    padding: 6px 10px 7px 0;
+    height: 14px;
+    line-height: 14px;
+    background-position: right -504px;
+    cursor: pointer;
+    _line-height: 12px;
+}
+.tb-shop .hotel-share-action a span em {
+    margin-left: 2px;
+}
+.tb-shop .hotel-share-action i {
+    width: 12px;
+    height: 12px;
+    margin: -2px 5px 0 0;
+    _margin-top: -1px;
+}
+
+.tb-shop .hotel-share-action .hotel-share i {
+    background-position: 0 -578px;
+}
+.tb-shop .hotel-share-action .hotel-fav i {
+    background-position: -22px -578px;
+}*/
+/* end sns------------------------------------------------------------}}} */
+.hotel-fav-overlay {
+    position: absolute;
+    padding: 7px;
+    overflow: hidden;
+    width: 430px;
+    outline: none;
+    border-radius: 5px;
+    /**background: #AAA;*/
+}
+
+.hotel-fav-overlay .close-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: url(http://img03.taobaocdn.com/tps/i3/T1EYY.XkVcXXbzhCMw-112-182.png) 0 -136px no-repeat;
+    display: block;
+    width: 19px;
+    height: 18px;
+    overflow: hidden;
+    z-index: 3;
+    text-indent: -9999em;
+}
+
+.hotel-fav-overlay .close-btn:hover {
+    background-position: 0 -163px;
+}
+
+.hotel-fav-overlay .hotel-fav-bg {
+    background-color: #333;
+    opacity: .5;
+    filter: alpha(opacity = 50);
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 500px;
+    height: 999px;
+    /**display:none;*/
+}
+
+.hotel-fav-overlay iframe {
+   position: relative;
+   z-index: 2;
+}
+
+/* 法律提示 */
+.legal-tips {
+    font-size: 14px;
+    padding: 5px 25px;
+    background-color: #FFF5CF;
+}
+
+.tb-shop .legal-tips a {
+    color: #36C;
+}
+
+/* 编辑器相关属性重置 */
+.item-desc img, .how-to-buy img {
+    /*max-width: 100%;*/
+}
+.item-desc table, .how-to-buy table {
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+.item-desc em, .how-to-buy em {
+    font-style: italic;
+}
+.item-desc ul, .item-desc ul li, .how-to-buy ul, .how-to-buy ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+.item-desc ol, .item-desc ol li, .how-to-buy ol, .how-to-buy ol li {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+.promotion-nights{
+    position:absolute;
+    height:42px;
+    margin:5px 0 0 10px;
+    display:inline-block;
+    zoom:1;
+    background:url("http://img01.taobaocdn.com/tps/i1/T1WPu1XrBeXXb.noZ_-11-42.png") no-repeat;
+    padding:3px 0 3px 15px;
+    line-height:18px;
+    color:#999;
+}
